@@ -10,17 +10,17 @@
     --max-container-width: 160rem;
     --content-padding: 4rem;
     --inter: 'Inter', sans-serif;
-    --light-brown: #FFEDE3;
-    --medium-brown: #A98774;
-    --dark-brown: #5F4B41;
-   
+    --light-brown: #ffede3;
+    --medium-brown: #a98774;
+    --dark-brown: #5f4b41;
 }
 
 html {
     box-sizing: border-box;
     font-size: 10px;
+    font-size: clamp(5px, 0.52vw, 25px);
     -webkit-text-size-adjust: 100%;
-  
+
     @include noHighlight();
 }
 
@@ -121,25 +121,23 @@ button {
     outline: none;
     display: inline-block;
     position: relative;
-    transition: color .2s;
+    transition: color 0.2s;
 }
 
 a {
     background-color: transparent;
     text-decoration: none;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: inherit;
     }
 }
 
-
-
 svg {
     flex-shrink: 0;
     fill: currentColor;
-    transition: fill .2s;
+    transition: fill 0.2s;
 }
 
 img {
@@ -167,12 +165,11 @@ th {
     font-weight: 400;
 }
 
-td, th {
+td,
+th {
     text-align: left;
     vertical-align: top;
 }
-
-
 
 .visually-hidden {
     @include visuallyHidden();
@@ -208,8 +205,8 @@ select:-webkit-autofill:focus {
     background-color: transparent;
 }
 
-
 .smooth-scroll {
     position: fixed;
     width: 100%;
+    overflow: hidden !important;
 }

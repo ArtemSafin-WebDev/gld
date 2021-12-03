@@ -9,22 +9,31 @@ export default function headerProjectSlider() {
         const container = element.querySelector('.swiper-container');
 
         let animationShown = false;
+        let instance = null;
+        let timer = null;
 
-        new Swiper(container, {
-            slidesPerView: 1,
-            watchOverflow: true,
-            // effect: 'fade',
-            // fadeEffect: {
-            //     crossFade: true
-            // }
+        function initializeSlider() {
+            instance = new Swiper(container, {
+                slidesPerView: 1,
+                watchOverflow: true
+            });
+        }
+
+        initializeSlider();
+
+        let prevWidth = window.innerWidth;
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth !== prevWidth) {
+                location.reload();
+            }
         });
-
 
         element.addEventListener('mouseenter', () => {
             if (!animationShown) {
                 element.classList.add('show-work');
                 animationShown = true;
             }
-        })
+        });
     });
 }

@@ -166,9 +166,10 @@ export default function scrollAnimations() {
     const pageHeader = document.querySelector('.page-header');
 
     if (pageHeader) {
+       
         ScrollTrigger.create({
             trigger: pageHeader,
-            start: 'top top-=2',
+            start: 'top+=5 top',
 
             end: 99999999999999,
             pin: true,

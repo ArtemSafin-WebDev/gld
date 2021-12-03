@@ -1,12 +1,11 @@
 .page-header {
     position: relative;
     padding-top: 4.5rem;
-   
+
     z-index: 50;
     pointer-events: none;
 
     &--positioned-top {
-       
         padding-bottom: 4.5rem;
     }
 }
@@ -20,6 +19,7 @@
     grid-column: 1 / 2;
     align-self: flex-start;
     justify-self: flex-start;
+    pointer-events: initial;
 }
 
 .page-header__logo-image {
@@ -61,6 +61,11 @@ svg.page-header__logo-image {
                 line-height: 2rem;
                 pointer-events: initial;
                 @include underline();
+
+                &.active {
+                    opacity: 0.7;
+                    pointer-events: none;
+                }
             }
         }
     }
@@ -141,6 +146,9 @@ svg.page-header__logo-image {
     transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
     transform-origin: center top;
     pointer-events: initial;
+  
+
+   
     .sticky-header & {
         transform: scaleY(0);
         opacity: 0;
