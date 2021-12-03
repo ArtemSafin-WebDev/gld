@@ -1,11 +1,12 @@
 .page-header {
     position: relative;
     padding-top: 4.5rem;
-    z-index: 140;
+   
+    z-index: 50;
     pointer-events: none;
 
     &--positioned-top {
-        padding-top: 4.5rem;
+       
         padding-bottom: 4.5rem;
     }
 }
@@ -32,7 +33,7 @@ svg.page-header__logo-image {
     transition: fill 0.2s;
     .page-header--biege &,
     .biege-header-mode & {
-        fill: var(--dark-brown);
+        fill: var(--medium-brown);
     }
 }
 .page-header__nav-wrapper {
@@ -87,7 +88,7 @@ svg.page-header__logo-image {
     &:visited {
         color: var(--light-brown);
     }
-    &.disabled {
+    &.active {
         opacity: 0.7;
         pointer-events: none;
     }

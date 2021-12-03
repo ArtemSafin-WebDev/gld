@@ -1,6 +1,8 @@
 .projects-footer {
     background-color: var(--dark-brown);
     color: var(--medium-brown);
+    position: relative;
+    z-index: 60;
 }
 
 .projects-footer__grid {

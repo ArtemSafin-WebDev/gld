@@ -168,7 +168,7 @@ export default function scrollAnimations() {
     if (pageHeader) {
         ScrollTrigger.create({
             trigger: pageHeader,
-            start: 'top top',
+            start: 'top top-=2',
 
             end: 99999999999999,
             pin: true,
