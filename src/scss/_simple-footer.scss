@@ -1,0 +1,78 @@
+.simple-footer {
+
+}
+
+.simple-footer__grid {
+    @include grid();
+    min-height: 45rem;
+    padding: 2.2rem 0;
+}
+
+.simple-footer__address {
+    grid-column: 1 / 3;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: baseline;
+    align-self: flex-end;
+}
+
+
+.simple-footer__year {
+    margin-right: 2.2rem;
+}
+
+.simple-footer__address-text {
+
+}
+
+.simple-footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-end;
+    justify-self: flex-start;
+    grid-column: 3 / 5;
+}
+
+.simple-footer__contacts-mail-link {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    display: inline-flex;
+   
+    margin-bottom: 1.4rem;
+
+    @include underline();
+}
+
+.simple-footer__contacts-phone-link {
+    font-weight: normal;
+    font-size: 5rem;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.simple-footer__made-by {
+    grid-column: 6 / -1;
+    text-align: right;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+
+.simple-footer__made-by-text {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.simple-footer__made-by-logo {
+    width: 10rem;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Новости
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 35 35" id="arrow-left" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 30.43L21.93 32 8.25 18.33l-.75-.79.75-.78L21.93 3.08l1.57 1.58-12.89 12.88z"/></symbol><symbol viewBox="0 0 35 35" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 30.43L13.07 32l13.68-13.67.75-.79-.75-.78L13.07 3.08 11.5 4.66l12.89 12.88z"/></symbol><symbol viewBox="0 0 19.09 19.09" id="cross" xmlns="http://www.w3.org/2000/svg"><path d="M19.09 1.41L17.68 0 9.55 8.13 1.41 0 0 1.41l8.13 8.14L0 17.68l1.41 1.41 8.14-8.13 8.13 8.13 1.41-1.41-8.13-8.13 8.13-8.14z"/></symbol><symbol viewBox="0 0 34.18 34.18" id="diagonal-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M0 .84v33.34h33.34v-3H5.15l29-29L32 0 3 29V.82z"/></symbol><symbol viewBox="0 0 10.81 10.81" id="diagonal-arrow-fat" xmlns="http://www.w3.org/2000/svg"><path d="M10.81 1.06L9.75 0 1.49 8.26 1.5.37 0 .38v10.43h10.44l.01-1.49h-7.9l8.05-8.05.21-.21z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+
+<div class="page-header page-header--positioned-top page-header--biege">
+    <div class="container">
+
+
+        <div class="page-header__row">
+            <a href="/" class="page-header__logo">
+                <img src="img/logo-biege.svg" alt="" class="page-header__logo-image" width="56">
+            </a>
+            <div class="page-header__nav-wrapper">
+                <nav class="page-header__nav">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    About
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    Investors
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    News
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    Contact
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="page-header__projects">
+                <h3 class="page-header__projects-heading">
+                    <a href="#" class="page-header__projects-link disabled">
+                        <div class="page-header__projects-link-inner">
+                            <span>
+                                Projects
+                            </span>
+                        </div>
+                        <div class="page-header__projects-link-count">
+                            ²³
+                        </div>
+                    </a>
+                </h3>
+
+            </div>
+            <div class="page-header__info">
+                <div class="page-header__languages">
+                    <a href="#" class="page-header__languages-link active">
+                        <span>
+                            En
+                        </span>
+                    </a>
+                    <a href="#" class="page-header__languages-link">
+                        <span>
+                            Ge
+                        </span>
+                    </a>
+                </div>
+                <a href="tel:+4923179786153" class="page-header__phone">+49 231 797 861 53</a>
+            </div>
+        </div>
+    </div>
+</div><section class="news">
+    <div class="container">
+        <div class="news__top-row">
+            <div class="news__filters">
+                <h3 class="news__filters-heading">
+                    Date
+                </h3>
+                <div class="news__filters-categories">
+                    <a href="#" class="news__filters-categories-link active">
+                        All <span class="news__filters-categories-link-count">
+                            23
+                        </span>
+                    </a>
+                    <a href="#" class="news__filters-categories-link">
+                        Done <span class="news__filters-categories-link-count">
+                            18
+                        </span>
+                    </a>
+                    <a href="#" class="news__filters-categories-link">
+                        Planning <span class="news__filters-categories-link-count">
+                            5
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <h1 class="news__large-heading">
+                News <span class="news__large-heading-count">69</span>
+            </h1>
+
+        </div>
+
+
+    </div>
+    <div class="news__image-block">
+        <div class="news__image-block-bg">
+            <div class="news__image-block-bg-image-wrapper">
+                <img src="img/news.jpg" alt="" class="news__image-block-bg-image">
+            </div>
+        </div>
+        <div class="container">
+            <div class="news__image-block-grid">
+                <a href="#" class="news__image-block-card">
+                    <div class="news__image-block-card-info">
+                        14 sep · press release
+                    </div>
+                    <h3 class="news__image-block-card-title">
+                        <span>
+                            Developers' interest in residential projects has increased in Berlin.
+                        </span>
+                    </h3>
+                    <div class="news__image-block-card-row">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                            <use xlink:href="#diagonal-arrow"></use>
+                        </svg>
+                        <div class="news__image-block-card-description">
+                            <p>
+                                We want to build big facilities.But we don't have any. Greater Leipzig - no architecture
+                                there yet. We are in the process of buying a castle for redevelopment into housing, but
+                                there is no architecture there yet either.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="news__all-articles">
+        <div class="container">
+
+
+            <div class="news__all-articles-grid">
+
+
+                <div class="news__all-articles-content">
+
+
+                    <h3 class="news__all-articles-heading">
+                        All articles
+                        <span class="news__all-articles-count">
+                            84
+                        </span>
+                    </h3>
+                    <ul class="news__all-articles-list">
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+
+
+                                    <div class="latest-news__slider-card-info">
+                                        14 sep · press release
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Developers' interest in residential projects has increased in Berlin.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                We want to build big facilities.But we don't have any. Greater Leipzig -
+                                                no
+                                                architecture there yet. We are in the process of buying a castle for
+                                                redevelopment into housing, but there is no architecture there yet
+                                                either.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/1.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+                                    <div class="latest-news__slider-card-info">
+                                        22 sep · News
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Pedestrian infrastructure is real magic.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                The first successful negotiations took place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/2.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+
+
+                                    <div class="latest-news__slider-card-info">
+                                        14 sep · press release
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Developers' interest in residential projects has increased in Berlin.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                We want to build big facilities.But we don't have any. Greater Leipzig -
+                                                no
+                                                architecture there yet. We are in the process of buying a castle for
+                                                redevelopment into housing, but there is no architecture there yet
+                                                either.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/1.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+                                    <div class="latest-news__slider-card-info">
+                                        22 sep · News
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Pedestrian infrastructure is real magic.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                The first successful negotiations took place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/2.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+
+
+                                    <div class="latest-news__slider-card-info">
+                                        14 sep · press release
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Developers' interest in residential projects has increased in Berlin.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                We want to build big facilities.But we don't have any. Greater Leipzig -
+                                                no
+                                                architecture there yet. We are in the process of buying a castle for
+                                                redevelopment into housing, but there is no architecture there yet
+                                                either.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/1.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+                                    <div class="latest-news__slider-card-info">
+                                        22 sep · News
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Pedestrian infrastructure is real magic.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                The first successful negotiations took place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/2.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+
+
+                                    <div class="latest-news__slider-card-info">
+                                        14 sep · press release
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Developers' interest in residential projects has increased in Berlin.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                We want to build big facilities.But we don't have any. Greater Leipzig -
+                                                no
+                                                architecture there yet. We are in the process of buying a castle for
+                                                redevelopment into housing, but there is no architecture there yet
+                                                either.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/1.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="news__all-articles-list-item">
+                            <a href="#" class="latest-news__slider-card">
+                                <div class="latest-news__slider-card-content">
+                                    <div class="latest-news__slider-card-info">
+                                        22 sep · News
+                                    </div>
+                                    <h3 class="latest-news__slider-card-title">
+                                        <span>
+                                            Pedestrian infrastructure is real magic.
+                                        </span>
+                                    </h3>
+                                    <div class="latest-news__slider-card-row">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                            <use xlink:href="#diagonal-arrow"></use>
+                                        </svg>
+                                        <div class="latest-news__slider-card-description">
+                                            <p>
+                                                The first successful negotiations took place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="latest-news__slider-card-image-container">
+                                    <img src="img/all-articles/2.jpg" alt="" class="latest-news__slider-card-image">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="news__pagination">
+                        <ul class="news__pagination-list">
+                            <li class="news__pagination-list-item">
+                                <a href="#" class="news__pagination-link current">
+                                    1
+                                </a>
+                            </li>
+                            <li class="news__pagination-list-item">
+                                <a href="#" class="news__pagination-link">
+                                    2
+                                </a>
+                            </li>
+                            <li class="news__pagination-list-item">
+                                <a href="#" class="news__pagination-link">
+                                    ...
+                                </a>
+                            </li>
+                            <li class="news__pagination-list-item">
+                                <a href="#" class="news__pagination-link">
+                                    9
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="news__pagination-next">
+                            <span class="news__pagination-next-text">
+                                Next
+                            </span>
+                            <span class="news__pagination-next-icon">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><footer class="simple-footer">
+    <div class="container">
+        <div class="simple-footer__grid">
+            <div class="simple-footer__address">
+                <div class="simple-footer__year">
+                    © 2021
+                </div>
+                <div class="simple-footer__address-text">
+                    <p>
+                        Weingartenstr. 13, <br> 44263, Dortmund, Germany.
+                    </p>
+                </div>
+            </div>
+            <div class="simple-footer__contacts">
+                <a href="mailto:info@gld-gmbh.de"
+                    class="simple-footer__contacts-mail-link"><span>info@gld-gmbh.de</span></a>
+                <a href="tel:+49 231 797-861-53" class="simple-footer__contacts-phone-link">+49 231 797-861-53</a>
+            </div>
+            <a href="#" class="simple-footer__made-by">
+                <div class="simple-footer__made-by-text">
+                    Creating a website
+                </div>
+                <img src="img/mw-logo-brown.svg" alt="" class="simple-footer__made-by-logo">
+            </a>
+        </div>
+    </div>
+</footer>
+        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>
