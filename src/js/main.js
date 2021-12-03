@@ -13,6 +13,9 @@ import accordions from './accordions';
 import modals from './modals';
 import latestNews from './latestNews';
 import headerProjectSlider from './headerSlider';
+import menu from './menu';
+import scrollAnimations from './scrollAnimations';
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
     latestNews();
     headerProjectSlider();
+    menu();
+    scrollAnimations();
 });
 
 window.addEventListener('load', function() {
