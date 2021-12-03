@@ -15,6 +15,7 @@ import latestNews from './latestNews';
 import headerProjectSlider from './headerSlider';
 import menu from './menu';
 import scrollAnimations from './scrollAnimations';
+import cookies from './cookies';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerProjectSlider();
     menu();
     scrollAnimations();
+    cookies();
 });
 
 window.addEventListener('load', function() {

@@ -172,6 +172,8 @@
     align-items: center;
     grid-column: span 2;
     padding-left: 4rem;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .about__film-video-play-duration {
@@ -221,4 +223,16 @@
     font-size: 2.5rem;
     line-height: 110%;
     padding-right: 4rem;
+}
+
+
+.about__film-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: top center;
+    background-color: var(--dark-brown);
+    z-index: 30;
 }
