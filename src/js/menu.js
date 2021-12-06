@@ -13,7 +13,11 @@ export default function menu() {
             loop: false,
             loopedSlides: 3,
             loopAdditionalSlides: 2,
-            parallax: true
+            parallax: true,
+            navigation: {
+                nextEl: '.menu__slider-arrow--next',
+                prevEl: '.menu__slider-arrow--prev'
+            }
         });
     }
 

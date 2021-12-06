@@ -80,6 +80,7 @@
     flex-direction: column;
     margin-right: calc(-1 * (var(--side-gap) + var(--content-padding)));
     background-color: var(--medium-brown);
+    position: relative;
     .swiper-container {
         // overflow: visible;
         margin: 0;
@@ -91,6 +92,80 @@
     }
 }
 
+.menu__slider-controls {
+    position: absolute;
+    right: 100%;
+    top: 23.5rem;
+    transform: translateX(50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    z-index: 30;
+}
+
+.menu__projects-link {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 300;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin-bottom: 2.5rem;
+
+    .menu__projects-link-text {
+        text-decoration: none;
+        & > span {
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 1px;
+
+            transition: background-size 0.25s ease-out;
+        }
+    }
+
+    .no-touch &:hover {
+        .menu__projects-link-text {
+            & > span {
+                background-size: 0% 1px;
+            }
+        }
+    }
+}
+
+.menu__projects-link-count {
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.menu__slider-arrows {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.menu__slider-arrow {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: var(--light-brown);
+    }
+}
 .menu__logo {
     grid-column: span 1;
     margin-bottom: 10rem;
@@ -172,13 +247,13 @@
 
     opacity: 0;
     transform: translateX(-6rem);
-    transition: all .6s;
+    transition: all 0.6s;
 
     .menu-open & {
         opacity: 1;
         transform: translateX(0);
-        transition: all .6s ease-out;
-        transition-delay: .6s;
+        transition: all 0.6s ease-out;
+        transition-delay: 0.6s;
     }
 }
 
@@ -225,13 +300,13 @@
 
     opacity: 0;
     transform: translateX(-6rem);
-    transition: all .6s;
+    transition: all 0.6s;
 
     .menu-open & {
         opacity: 1;
         transform: translateX(0);
-        transition: all .6s ease-out;
-        transition-delay: .6s;
+        transition: all 0.6s ease-out;
+        transition-delay: 0.6s;
     }
 }
 
@@ -273,14 +348,12 @@
 
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0s linear 0.4s, transform .4s;
-
-   
+    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
 
     .menu-open & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity 0.4s ease 0.4s, visibility 0.8s, transform .4s;
+        transition: opacity 0.4s ease 0.4s, visibility 0.8s, transform 0.4s;
     }
     svg {
         display: block;
