@@ -24,7 +24,7 @@
 
 .page-header__logo-image {
     width: 5.4rem;
-    height: 8rem;
+    height: 7.6rem;
     display: block;
 }
 
@@ -38,6 +38,38 @@ svg.page-header__logo-image {
 }
 .page-header__nav-wrapper {
     grid-column: 2 / 3;
+    position: relative;
+
+}
+
+.page-header__burger-btn {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity .3s, visibility 0s linear .3s;
+    pointer-events: initial;
+    margin-top: 0.3rem;
+    .sticky-header & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .3s, visibility .3s;
+    }
+    svg {
+        display: block;
+        width: 3.6rem;
+        height: 1.2rem;
+        fill: var(--light-brown);
+        transition: fill .2s;
+    }
+
+    .page-header--biege &,
+    .biege-header-mode & {
+        svg {
+            fill: var(--dark-brown);
+        }
+    }
 }
 
 .page-header__nav {

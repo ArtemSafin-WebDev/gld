@@ -1,6 +1,8 @@
+
 import { Swiper, EffectFade } from 'swiper';
 
 Swiper.use([EffectFade]);
+
 
 export default function headerProjectSlider() {
     const elements = Array.from(document.querySelectorAll('.js-header-projects-slider'));
@@ -10,7 +12,7 @@ export default function headerProjectSlider() {
 
         let animationShown = false;
         let instance = null;
-        let timer = null;
+       
 
         function initializeSlider() {
             instance = new Swiper(container, {
@@ -21,13 +23,6 @@ export default function headerProjectSlider() {
 
         initializeSlider();
 
-        let prevWidth = window.innerWidth;
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth !== prevWidth) {
-                location.reload();
-            }
-        });
 
         element.addEventListener('mouseenter', () => {
             if (!animationShown) {

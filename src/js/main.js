@@ -16,6 +16,8 @@ import headerProjectSlider from './headerSlider';
 import menu from './menu';
 import scrollAnimations from './scrollAnimations';
 import cookies from './cookies';
+import calculateSideGaps from './calculateSideGaps';
+import refreshOnResize from './refreshOnResize';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -36,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     scrollAnimations();
     cookies();
+    calculateSideGaps();
+    refreshOnResize();
 });
 
 window.addEventListener('load', function() {

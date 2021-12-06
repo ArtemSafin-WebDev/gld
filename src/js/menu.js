@@ -10,10 +10,39 @@ export default function menu() {
             watchOverflow: true,
             slidesPerView: 'auto',
             speed: 800,
-            loop: true,
+            loop: false,
             loopedSlides: 3,
             loopAdditionalSlides: 2,
             parallax: true
         });
     }
+
+    const openBurger = document.querySelector('.page-header__burger-btn');
+    const closeBurger = document.querySelector('.menu__burger');
+    const menu = document.querySelector('.menu');
+
+    if (!openBurger) return;
+
+    console.log('Menu script');
+    let menuOpen = false;
+    const openMenu = () => {
+        if (menuOpen) return;
+        document.body.classList.add('menu-open');
+        menuOpen = true;
+    };
+
+    const closeMenu = () => {
+        if (!menuOpen) return;
+        document.body.classList.remove('menu-open');
+        menuOpen = false;
+    };
+
+    openBurger.addEventListener('click', event => {
+        event.preventDefault();
+        openMenu();
+    });
+    closeBurger.addEventListener('click', event => {
+        event.preventDefault();
+        closeMenu();
+    });
 }
