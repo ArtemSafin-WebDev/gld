@@ -3,4 +3,16 @@
     line-height: 110%;
     text-transform: uppercase;
     font-weight: 400;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 3rem;
+        line-height: 100%;
+    }
 }

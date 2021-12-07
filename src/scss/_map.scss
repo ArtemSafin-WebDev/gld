@@ -62,6 +62,13 @@
     max-width: 80rem;
     position: relative;
     z-index: 20;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 110%;
+        max-width: 50rem;
+    }
 }
 
 .map__link {
@@ -85,14 +92,20 @@
     color: var(--dark-brown);
     position: relative;
     z-index: 20;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 123.02%;
+    }
 }
 
 .map__city {
     position: absolute;
-   
+
     display: flex;
     align-items: flex-start;
-
+    margin-top: -2.6rem;
     z-index: 50;
 }
 
@@ -124,10 +137,15 @@
     border-left: none;
     height: 2.6rem;
     padding: 0.2rem 0.5rem;
-    white-space: nowrap;
     background-color: var(--dark-brown);
     color: var(--light-brown);
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
 }
 
 .map__city-list {

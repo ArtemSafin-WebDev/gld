@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     setScrollbarWidth();
+    calculateSideGaps();
     validation();
     customSelects();
     masks();
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     scrollAnimations();
     cookies();
-    calculateSideGaps();
+   
     refreshOnResize();
 });
 

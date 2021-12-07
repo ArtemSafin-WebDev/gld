@@ -4,30 +4,41 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import imagesLoaded from 'imagesloaded';
 import { convertRemToPixels } from './utils';
-
+import { primaryInput } from 'detect-it';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-
-
 export default function scrollAnimations() {
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector('.smooth-scroll'),
-        smooth: true,
-        multiplier: 0.8
-    });
+    let locoScroll = null;
 
-    locoScroll.on('scroll', ScrollTrigger.update);
+    if (primaryInput !== 'touch') {
+        document.body.classList.add('loco-scroll-active');
+        locoScroll = new LocomotiveScroll({
+            el: document.querySelector('.smooth-scroll'),
+            smooth: true,
+            multiplier: 0.8
+        });
 
-    ScrollTrigger.scrollerProxy('.smooth-scroll', {
-        scrollTop(value) {
-            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-        },
-        pinType: document.querySelector('.smooth-scroll').style.transform ? 'transform' : 'fixed'
-    });
+        locoScroll.on('scroll', ScrollTrigger.update);
+
+        ScrollTrigger.scrollerProxy('.smooth-scroll', {
+            scrollTop(value) {
+                return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+            },
+            pinType: document.querySelector('.smooth-scroll').style.transform ? 'transform' : 'fixed'
+        });
+    }
+
+    let scrollerOptions = {};
+
+    if (locoScroll) {
+        scrollerOptions = {
+            scroller: '.smooth-scroll'
+        };
+    }
 
     const scrollByHash = hash => {
         const elementToScroll = document.querySelector(hash);
@@ -38,7 +49,19 @@ export default function scrollAnimations() {
                 console.log('menu not open');
             }
 
-            locoScroll.scrollTo(elementToScroll);
+            if (locoScroll) {
+                locoScroll.scrollTo(elementToScroll);
+            } else {
+                gsap.to(window, {
+                    duration: 1,
+                    ease: 'power2.out',
+                    scrollTo: {
+                        y: elementToScroll,
+                        autoKill: false,
+                        offsetY: 0
+                    }
+                });
+            }
         } else {
             console.error('No element to scroll');
         }
@@ -68,7 +91,7 @@ export default function scrollAnimations() {
             scrollTrigger: {
                 trigger: element,
                 start: 'top bottom-=80',
-                scroller: '.smooth-scroll'
+                ...scrollerOptions
             }
         });
 
@@ -83,19 +106,23 @@ export default function scrollAnimations() {
     const blocksToReveal = Array.from(document.querySelectorAll('.js-block-to-reveal'));
 
     blocksToReveal.forEach(element => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: 'top bottom-=80',
-                end: 'center center',
-                scroller: '.smooth-scroll',
-                scrub: true
-            }
-        });
+        ScrollTrigger.matchMedia({
+            '(min-width: 1025px)': function() {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top bottom-=80',
+                        end: 'center center',
+                        scrub: true,
+                        ...scrollerOptions
+                    }
+                });
 
-        tl.from(element, {
-            autoAlpha: 0,
-            duration: 0.6
+                tl.from(element, {
+                    autoAlpha: 0,
+                    duration: 0.6
+                });
+            }
         });
     });
 
@@ -110,7 +137,7 @@ export default function scrollAnimations() {
                     start: 'top bottom',
                     end: 'bottom top',
                     scrub: true,
-                    scroller: '.smooth-scroll'
+                    ...scrollerOptions
                 }
             });
 
@@ -135,7 +162,7 @@ export default function scrollAnimations() {
             scrollTrigger: {
                 trigger: element,
                 start: 'top bottom-=80',
-                scroller: '.smooth-scroll'
+                ...scrollerOptions
             }
         });
 
@@ -153,7 +180,7 @@ export default function scrollAnimations() {
             scrollTrigger: {
                 trigger: element,
                 start: 'bottom bottom-=40',
-                scroller: '.smooth-scroll'
+                ...scrollerOptions
             }
         });
 
@@ -166,16 +193,15 @@ export default function scrollAnimations() {
     const pageHeader = document.querySelector('.page-header');
 
     if (pageHeader) {
-       
         ScrollTrigger.create({
             trigger: pageHeader,
             start: 'top+=5 top',
 
             end: 99999999999999,
             pin: true,
-            scroller: '.smooth-scroll',
             pinSpacing: false,
-            toggleClass: 'sticky-header'
+            toggleClass: 'sticky-header',
+            ...scrollerOptions
         });
 
         if (document.querySelector('[data-biege-header-start]')) {
@@ -184,9 +210,8 @@ export default function scrollAnimations() {
                 start: 'top top',
                 endTrigger: '[data-biege-header-end]',
                 end: 'top top',
-                scroller: '.smooth-scroll',
                 pinSpacing: false,
-
+                ...scrollerOptions,
                 onToggle: self => {
                     if (self.isActive) {
                         document.body.classList.add('biege-header-mode');
@@ -207,7 +232,7 @@ export default function scrollAnimations() {
                 start: 'top top',
                 end: 'bottom top',
                 scrub: true,
-                scroller: '.smooth-scroll'
+                ...scrollerOptions
             }
         });
 

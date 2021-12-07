@@ -6,12 +6,20 @@
 .about__content {
     padding-top: 5.5rem;
     padding-bottom: 7rem;
+    @include breakpoint(tablet) {
+        padding-top: 5rem;
+        padding-bottom: 4.5rem;
+    }
 }
 
 .about__top-row {
     @include grid();
     margin-bottom: 10rem;
     align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 5.6rem;
+    }
 }
 
 .about__small-heading {
@@ -19,6 +27,13 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 123.02%;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 123.02%;
+        margin-top: 0.2rem;
+    }
 }
 
 .about__large-heading {
@@ -27,6 +42,12 @@
     font-size: 5rem;
     line-height: 110%;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
 }
 
 .about__grid {
@@ -39,6 +60,14 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
     margin-bottom: 13.5rem;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 5rem;
+        
+    }
 }
 
 .about__numbers {
@@ -47,12 +76,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include breakpoint(tablet) {
+        justify-self: flex-end;
+    }
 }
 
 .about__numbers-inner {
     max-width: 25rem;
     margin: 0 auto;
     width: 100%;
+
+    @include breakpoint(tablet) {
+        margin: 0;
+        max-width: 21.5rem;
+    }
 }
 
 .about__numbers-list {
@@ -61,6 +99,9 @@
     border: 0.2rem solid var(--dark-brown);
     padding: 1rem 0;
     margin-bottom: 6rem;
+    @include breakpoint(tablet) {
+        margin-bottom: 5rem;
+    }
 }
 
 .about__numbers-list-item {
@@ -69,6 +110,10 @@
 .about__numbers-card {
     padding: 4rem 2rem;
     text-align: center;
+
+    @include breakpoint(tablet) {
+        padding: 3rem 2rem;
+    }
 }
 
 .about__numbers-card-amount {
@@ -77,12 +122,24 @@
     line-height: 110%;
     text-transform: uppercase;
     margin-bottom: 1rem;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 2.8rem;
+        line-height: 110%;
+    }
 }
 
 .about__numbers-card-text {
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.8rem;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 }
 
 .about__numbers-link {
@@ -165,6 +222,10 @@
     align-items: center;
     padding: 3.5rem 0;
     max-height: 100%;
+
+    @include breakpoint(tablet) {
+        padding: 2rem 0;
+    }
 }
 
 .about__film-video-play {
@@ -174,6 +235,10 @@
     padding-left: 4rem;
     opacity: 0;
     visibility: hidden;
+
+    @include breakpoint(tablet) {
+        padding-left: 2rem;
+    }
 }
 
 .about__film-video-play-duration {
@@ -187,9 +252,16 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
     margin-right: 1.5rem;
-
     position: relative;
     z-index: 1;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        width: 7.5rem;
+        height: 9.6rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -215,6 +287,12 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
     transition: transform 0.3s;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 }
 
 .about__film-video-description {
@@ -223,8 +301,14 @@
     font-size: 2.5rem;
     line-height: 110%;
     padding-right: 4rem;
-}
 
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 110%;
+        padding-right: 2rem;
+    }
+}
 
 .about__film-overlay {
     position: absolute;

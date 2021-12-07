@@ -20,11 +20,8 @@
         .touch &:active {
             background-color: var(--medium-brown);
             color: var(--light-brown);
-            
 
             .dot-btn__dot {
-                
-
                 &::before {
                     background-color: var(--light-brown);
                 }
@@ -67,6 +64,13 @@
     text-align: center;
     width: 50%;
     flex-grow: 1;
+
+    @include breakpoint(tablet) {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        padding: 1.6rem 2.5rem;
+    }
 }
 
 .dot-btn__dot {
@@ -75,10 +79,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 5.5rem;
-    border-left: 0.2rem solid var(--dark-brown);
+    width: 5.4rem;
+    border-left: 2px solid var(--dark-brown);
     align-self: stretch;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    @include breakpoint(tablet) {
+        width: 5rem;
+    }
+
+   
 
     &::before {
         content: '';

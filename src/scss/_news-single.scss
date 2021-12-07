@@ -1,10 +1,18 @@
 .news-single {
     padding-top: 20rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 7rem;
+    }
 }
 
 .news-single__top-row {
     @include grid();
     margin-bottom: 15rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 4rem;
+    }
 }
 
 .news-single__back {
@@ -25,6 +33,11 @@
         width: 2rem;
         height: 2rem;
         fill: var(--dark-brown);
+
+        @include breakpoint(tablet) {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
     }
     &::after {
         content: '';
@@ -41,6 +54,12 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 }
 
 .news-single__heading-block {
@@ -50,6 +69,10 @@
     grid-row-gap: 6rem;
     grid-column: span 4;
     align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        grid-row-gap: 3rem;
+    }
 }
 
 .news-single__main-title {
@@ -58,6 +81,12 @@
     font-size: 5rem;
     line-height: 110%;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-weight: 400;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
 }
 
 .news-single__date {
@@ -66,6 +95,11 @@
     line-height: 2.1rem;
     grid-column: 2 / 3;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
 }
 
 .news-single__category {
@@ -74,11 +108,20 @@
     line-height: 2.1rem;
     text-transform: uppercase;
     grid-column: 3 / 4;
+
+    @include breakpoint(tablet) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
 }
 
 .news-single__content {
     @include grid();
     margin-bottom: 23rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 7rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -90,6 +133,11 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 2rem;
     grid-row-gap: 6.5rem;
+    align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        grid-row-gap: 4rem;
+    }
 }
 
 .news-single__content-image {
@@ -107,6 +155,11 @@
         height: 3.5rem;
         fill: var(--medium-brown);
         transform: rotate(180deg);
+
+        @include breakpoint(tablet) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
     }
 }
 
@@ -115,6 +168,11 @@
     font-weight: normal;
     font-size: 2.5rem;
     line-height: 110%;
+
+    @include breakpoint(tablet) {
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
     p {
         margin-bottom: 2rem;
         &:last-child {
@@ -122,7 +180,6 @@
         }
     }
 }
-
 
 .news-single__other-news-list {
     display: grid;

@@ -2,15 +2,26 @@
     padding-top: 5.5rem;
     padding-bottom: 7rem;
 
+    
+
     &--all {
         padding-top: 9rem;
         padding-bottom: 10rem;
+    }
+
+    @include breakpoint(tablet) {
+        padding-top: 5rem;
+        padding-bottom: 8rem;
     }
 }
 
 .projects__top-row {
     @include grid();
     margin-bottom: 6.5rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 5rem;
+    }
 }
 
 .projects__filters {
@@ -31,6 +42,10 @@
     align-items: flex-start;
     margin-top: -2rem;
     margin-left: -1.4rem;
+
+    @include breakpoint(tablet) {
+        font-size: 10rem;
+    }
 }
 
 .projects__large-heading-count {
@@ -42,6 +57,11 @@
     margin-left: 2rem;
     letter-spacing: 0;
     margin-top: 1rem;
+
+    @include breakpoint(tablet) {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
 }
 
 .projects__filters-heading {
@@ -50,6 +70,12 @@
     line-height: 123.02%;
     display: flex;
     align-items: flex-start;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 123.02%;
+    }
     &::after {
         content: '';
         flex-shrink: 0;
@@ -60,6 +86,11 @@
         margin-left: 3rem;
         margin-top: 1rem;
         flex-grow: 1;
+
+        @include breakpoint(tablet) {
+            margin-left: 1rem;
+            margin-top: 0.7rem;
+        }
     }
 }
 
@@ -83,6 +114,12 @@
         color: rgba(#5e4b41, 0.3);
     }
 
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 123.02%;
+    }
+
     &.active {
         color: #5e4b41;
     }
@@ -97,6 +134,10 @@
     font-size: 1rem;
     line-height: 1.2;
     margin-left: 0.5rem;
+
+    @include breakpoint(tablet) {
+        font-size: 0.8rem;
+    }
 }
 
 .projects__heading {
@@ -105,6 +146,12 @@
     line-height: 110%;
     text-transform: uppercase;
     grid-column: span 3;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
 }
 
 .projects__results {
@@ -121,6 +168,13 @@
     line-height: 1.2;
     max-width: 25rem;
     margin-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 3rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -192,6 +246,10 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+    @include breakpoint(tablet) {
+        margin-bottom: 1rem;
+    }
     &::before {
         content: '';
         display: block;
@@ -228,9 +286,15 @@
 
 .projects__results-card-title {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
 }
 
 .projects__results-card-number {
@@ -262,17 +326,27 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(tablet) {
+        padding: 2rem;
+    }
 }
 
 .projects__results-card-info-title {
     font-weight: 500;
     font-size: 3.4rem;
-    line-height: 41px;
+    line-height: 4.1rem;
     text-transform: uppercase;
     margin-bottom: 4rem;
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(2rem);
+
+    @include breakpoint(tablet) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .projects__results-card-info-table {
@@ -296,7 +370,6 @@
         font-weight: bold;
     }
 }
-
 
 .projects__results-card-overlay {
     position: absolute;

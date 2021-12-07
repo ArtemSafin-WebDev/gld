@@ -13,6 +13,8 @@
     --light-brown: #ffede3;
     --medium-brown: #a98774;
     --dark-brown: #5f4b41;
+
+    
 }
 
 html {
@@ -22,6 +24,11 @@ html {
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
+
+    @include breakpoint(tablet) {
+        font-size: 10px;
+        font-size: clamp(5px, 0.98vw, 10px);
+    } 
 }
 
 body {
@@ -205,7 +212,7 @@ select:-webkit-autofill:focus {
     background-color: transparent;
 }
 
-.smooth-scroll {
+.loco-scroll-active .smooth-scroll {
     position: fixed;
     width: 100%;
     overflow: hidden !important;

@@ -89,6 +89,10 @@
 
     .swiper-slide {
         width: 79rem;
+
+        @include breakpoint(tablet) {
+            width: 45rem;
+        }
     }
 }
 
@@ -111,6 +115,11 @@
     font-size: 3.5rem;
     line-height: 3rem;
     margin-bottom: 2.5rem;
+
+    @include breakpoint(tablet) {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
 
     .menu__projects-link-text {
         text-decoration: none;
@@ -137,6 +146,11 @@
     margin-left: 1rem;
     font-size: 1.8rem;
     line-height: 1.2;
+
+    @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        margin-left: 0.7rem;
+    }
 }
 
 .menu__slider-arrows {
@@ -154,6 +168,11 @@
     justify-content: center;
     transition: opacity 0.2s;
     flex-shrink: 0;
+
+    @include breakpoint(tablet) {
+        width: 3rem;
+        height: 3rem;
+    }
     &.swiper-button-disabled {
         opacity: 0.5;
         cursor: default;
@@ -191,6 +210,11 @@
     position: relative;
     left: -0.15rem;
     top: -0.125rem;
+
+    @include breakpoint(tablet) {
+        width: 11.7rem;
+        height: 7rem;
+    }
 }
 
 .menu__nav {
@@ -234,6 +258,11 @@
                 font-size: 2.5rem;
                 line-height: 3rem;
                 @include underline();
+
+                @include breakpoint(tablet) {
+                    font-size: 1.8rem;
+                    line-height: 1.2;
+                }
             }
         }
     }
@@ -322,6 +351,11 @@
         color: rgba(#ffede3, 0.7);
     }
     @include underline();
+
+    @include breakpoint(tablet) {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
 }
 
 .menu__phone-link {
@@ -350,6 +384,10 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
 
+    @include breakpoint(tablet) {
+        margin-top: 0.2rem;
+    }
+
     .menu-open & {
         opacity: 1;
         visibility: inherit;
@@ -360,6 +398,11 @@
         width: 3.5rem;
         height: 2rem;
         fill: var(--light-brown);
+
+        @include breakpoint(tablet) {
+            width: 3rem;
+            height: 1.8rem;
+        }
     }
 }
 
@@ -376,6 +419,11 @@
     font-size: 2.5rem;
     line-height: 3rem;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
 }
 
 .menu__slider-card-image-container {
