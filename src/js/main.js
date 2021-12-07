@@ -18,6 +18,7 @@ import scrollAnimations from './scrollAnimations';
 import cookies from './cookies';
 import calculateSideGaps from './calculateSideGaps';
 import refreshOnResize from './refreshOnResize';
+import mobileFullheightBlocks from './mobileFullheightBlocks';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cookies();
    
     refreshOnResize();
+    mobileFullheightBlocks();
 });
 
 window.addEventListener('load', function() {

@@ -342,6 +342,8 @@
     @include breakpoint(mobile) {
         padding-left: 1rem;
         grid-column: span 1;
+        opacity: 1;
+        visibility: inherit;
     }
 }
 

@@ -27,6 +27,9 @@
 
     @include breakpoint(mobile) {
         height: 50rem;
+
+
+        height: auto;
     }
 }
 
@@ -41,6 +44,12 @@
     flex-direction: column;
 
     position: relative;
+
+
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        
+    }
 }
 
 .map__container-inner {
@@ -61,13 +70,23 @@
     }
 
     @include breakpoint(mobile) {
-        width: 92.5rem;
+        width: 93.4rem;
+        height: 50rem;
+        flex-shrink: 0;
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
     }
 }
 
 .map__container-content {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+
+    @include breakpoint(mobile) {
+        pointer-events: none;
+    }
 }
 
 .map__container-content {
@@ -150,6 +169,7 @@
 
     @include breakpoint(mobile) {
         grid-column: 2 / -1;
+        pointer-events: initial;
     }
 }
 

@@ -176,17 +176,22 @@ export default function scrollAnimations() {
 
     videoCards.forEach(element => {
         const play = element.querySelector('.about__film-video-play');
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: 'bottom bottom-=40',
-                ...scrollerOptions
-            }
-        });
 
-        tl.to(play, {
-            autoAlpha: 1,
-            duration: 0.6
+        ScrollTrigger.matchMedia({
+            '(min-width: 641px)': function() {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'bottom bottom-=40',
+                        ...scrollerOptions
+                    }
+                });
+
+                tl.to(play, {
+                    autoAlpha: 1,
+                    duration: 0.6
+                });
+            }
         });
     });
 

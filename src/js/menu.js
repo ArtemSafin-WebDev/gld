@@ -1,4 +1,5 @@
 import { Swiper, Navigation, Parallax } from 'swiper';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 Swiper.use([Navigation, Parallax]);
 
@@ -32,14 +33,19 @@ export default function menu() {
     const openMenu = () => {
         if (menuOpen) return;
         document.body.classList.add('menu-open');
+        disableBodyScroll(menu);
         menuOpen = true;
     };
 
     const closeMenu = () => {
         if (!menuOpen) return;
         document.body.classList.remove('menu-open');
+        enableBodyScroll(menu);
         menuOpen = false;
     };
+
+    window.closeMenu = closeMenu;
+    window.openMenu = openMenu;
 
     openBurger.addEventListener('click', event => {
         event.preventDefault();

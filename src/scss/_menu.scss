@@ -40,7 +40,7 @@
         content: '';
         position: absolute;
         right: -2rem;
-        left: calc(-1 * (var(--side-gap) + var(--content-padding)));
+        left: calc(-1 * (var(--side-gap) + var(--content-padding) + var(--sb-width)));
         top: 0;
         bottom: 0;
         background-color: #624e43;
@@ -91,7 +91,7 @@
     grid-column: span 4;
     display: flex;
     flex-direction: column;
-    margin-right: calc(-1 * (var(--side-gap) + var(--content-padding)));
+    margin-right: calc(-1 * (var(--side-gap) + var(--content-padding) + var(--sb-width)));
     background-color: var(--medium-brown);
     position: relative;
 
