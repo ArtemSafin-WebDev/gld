@@ -76,6 +76,10 @@
         padding: 3rem 0;
     }
 
+    @include breakpoint(mobile) {
+        padding: 4.5rem 0;
+    }
+
     .menu-open & {
         opacity: 1;
         visibility: inherit;
@@ -228,11 +232,22 @@
         width: 11.7rem;
         height: 7rem;
     }
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+        height: 6rem;
+        left: 0;
+        top: -.67rem;
+    }
 }
 
 .menu__nav {
     grid-column: span 2;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
     & > ul {
         display: flex;
         flex-direction: column;
@@ -344,6 +359,10 @@
     transform: translateX(-6rem);
     transition: all 0.6s;
 
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
+
     .menu-open & {
         opacity: 1;
         transform: translateX(0);
@@ -399,6 +418,10 @@
 
     @include breakpoint(tablet) {
         margin-top: 0.2rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: -0.4rem;
     }
 
     .menu-open & {

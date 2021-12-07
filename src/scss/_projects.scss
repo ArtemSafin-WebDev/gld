@@ -16,6 +16,11 @@
         padding-top: 4.5rem;
         padding-bottom: 7rem;
     }
+
+    @include breakpoint(mobile) {
+        padding-top: 4rem;
+        padding-bottom: 9rem;
+    }
 }
 
 .projects__top-row {
@@ -28,6 +33,12 @@
 
     @include breakpoint(small-tablet) {
         margin-bottom: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 4.5rem;
     }
 }
 
@@ -128,6 +139,13 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: row;
+        align-items: initial;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
 }
 
 .projects__filters-categories-link {
@@ -186,6 +204,12 @@
         grid-column: span 2;
         margin-top: -0.5rem;
     }
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 2.7rem;
+        line-height: 100%;
+    }
 }
 
 .projects__results {
@@ -197,6 +221,11 @@
 
     @include breakpoint(small-tablet) {
         grid-column: span 1;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 2 / -1;
+        margin-bottom: 2rem;
     }
 }
 
@@ -213,6 +242,12 @@
         line-height: 1.5rem;
         margin-bottom: 3rem;
     }
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 123.02%;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -220,6 +255,13 @@
 
 .projects__results-list {
     display: contents;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.5rem;
+        display: grid;
+        grid-column: 1 / -1;
+    }
 }
 
 .projects__results-list-item {
@@ -268,6 +310,17 @@
         }
         &:nth-child(7) {
             grid-column: 2 / span 1;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+
+        .projects__results-card-image-container {
+            &::before {
+                padding-bottom: 61.53% !important;
+            }
         }
     }
 }
@@ -370,6 +423,10 @@
 
     @include breakpoint(small-tablet) {
         grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 2 / 4;
     }
 }
 

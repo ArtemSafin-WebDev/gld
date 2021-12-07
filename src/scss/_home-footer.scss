@@ -38,6 +38,11 @@
     @include breakpoint(tablet) {
         padding-top: 4rem;
     }
+
+    @include breakpoint(mobile) {
+        grid-template-rows: auto auto auto 1fr auto auto;
+        grid-row-gap: 0;
+    }
 }
 
 .home-footer__text {
@@ -58,6 +63,11 @@
     @include breakpoint(small-tablet) {
         text-indent: 25rem;
     }
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        text-indent: 12.3rem;
+        line-height: 100%;
+    }
 }
 
 .home-footer__email {
@@ -65,6 +75,10 @@
 
     @include breakpoint(small-tablet) {
         grid-column: 2 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        display: contents;
     }
 }
 
@@ -76,6 +90,12 @@
     @include breakpoint(tablet) {
         font-size: 3.2rem;
         line-height: 110%;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 100%;
+        grid-column: 2 / -1;
     }
 }
 
@@ -91,6 +111,12 @@
     @include breakpoint(tablet) {
         font-size: 3.2rem;
         line-height: 110%;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1;
+        grid-column: 1 / -1;
     }
     &:link,
     &:visited {
@@ -131,15 +157,34 @@
     @include breakpoint(small-tablet) {
         grid-column: 1 /2;
     }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 2rem;
+        order: 9;
+        margin-bottom: 4rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 }
 
 .home-footer__year {
     margin-right: 2.2rem;
     white-space: nowrap;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        grid-column: span 1;
+    }
 }
 
 .home-footer__address-text {
+    @include breakpoint(mobile) {
+        grid-column: span 2;
+    }
 }
 
 .home-footer__contacts {
@@ -152,6 +197,12 @@
 
     @include breakpoint(small-tablet) {
         grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        margin: 3rem 0;
+        align-self: center;
     }
 }
 
@@ -169,6 +220,12 @@
         line-height: 1.5rem;
         margin-bottom: 1rem;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .home-footer__contacts-phone-link {
@@ -179,6 +236,11 @@
     white-space: nowrap;
     @include breakpoint(tablet) {
         font-size: 3.2rem;
+        line-height: 110%;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 3.6rem;
         line-height: 110%;
     }
 }
@@ -196,6 +258,14 @@
     @include breakpoint(small-tablet) {
         grid-column: 3 / -1;
     }
+
+    @include breakpoint(mobile) {
+        grid-column: 2 / -1;
+        justify-self: flex-start;
+        text-align: left;
+        align-items: flex-start;
+        order: 10;
+    }
 }
 
 .home-footer__made-by-text {
@@ -208,6 +278,12 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+    }
 }
 
 .home-footer__made-by-logo {
@@ -217,5 +293,9 @@
 
     @include breakpoint(tablet) {
         width: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 10rem;
     }
 }
