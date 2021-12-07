@@ -32,6 +32,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / -1;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -67,6 +71,11 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+    @include breakpoint(small-tablet) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 3rem 0;
+    }
+
     .menu-open & {
         opacity: 1;
         visibility: inherit;
@@ -81,6 +90,10 @@
     margin-right: calc(-1 * (var(--side-gap) + var(--content-padding)));
     background-color: var(--medium-brown);
     position: relative;
+
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
     .swiper-container {
         // overflow: visible;
         margin: 0;

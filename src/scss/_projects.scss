@@ -2,8 +2,6 @@
     padding-top: 5.5rem;
     padding-bottom: 7rem;
 
-    
-
     &--all {
         padding-top: 9rem;
         padding-bottom: 10rem;
@@ -12,6 +10,11 @@
     @include breakpoint(tablet) {
         padding-top: 5rem;
         padding-bottom: 8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-top: 4.5rem;
+        padding-bottom: 7rem;
     }
 }
 
@@ -22,6 +25,10 @@
     @include breakpoint(tablet) {
         margin-bottom: 5rem;
     }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 8rem;
+    }
 }
 
 .projects__filters {
@@ -29,6 +36,12 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
+        display: flex;
+        grid-gap: unset;
+    }
 }
 
 .projects__large-heading {
@@ -46,6 +59,12 @@
     @include breakpoint(tablet) {
         font-size: 10rem;
     }
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 2;
+        font-size: 8rem;
+        margin-top: -1rem;
+    }
 }
 
 .projects__large-heading-count {
@@ -62,6 +81,11 @@
         font-size: 2.5rem;
         line-height: 1.2;
     }
+
+    @include breakpoint(small-tablet) {
+        font-size: 2rem;
+        margin-top: 0.7rem;
+    }
 }
 
 .projects__filters-heading {
@@ -75,6 +99,11 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 123.02%;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 11.5rem;
+        margin-right: 1rem;
     }
     &::after {
         content: '';
@@ -152,6 +181,11 @@
         font-size: 3.2rem;
         line-height: 110%;
     }
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 2;
+        margin-top: -0.5rem;
+    }
 }
 
 .projects__results {
@@ -160,6 +194,10 @@
 
 .projects__about-company {
     grid-column: span 2;
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
+    }
 }
 
 .projects__about-company-text {
@@ -210,6 +248,27 @@
     }
     &:nth-child(7) {
         grid-column: 3 / span 2;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
+        &:nth-child(1) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        &:nth-child(6) {
+            grid-row: span 2;
+        }
+        &:nth-child(7) {
+            grid-column: 2 / span 1;
+        }
     }
 }
 
@@ -308,6 +367,10 @@
     grid-column: 3 / span 2;
     justify-self: flex-start;
     margin-top: 4rem;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / 3;
+    }
 }
 
 .projects__results-card-info {

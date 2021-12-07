@@ -5,8 +5,18 @@
     z-index: 50;
     pointer-events: none;
 
+    
+
     &--positioned-top {
         padding-bottom: 4.5rem;
+
+        @include breakpoint(small-tablet) {
+            padding-bottom: 3rem;
+        }
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-top: 3rem;
     }
 }
 
@@ -44,6 +54,8 @@ svg.page-header__logo-image {
 .page-header__nav-wrapper {
     grid-column: 2 / 3;
     position: relative;
+
+    
 }
 
 .page-header__burger-btn {
@@ -130,6 +142,10 @@ svg.page-header__logo-image {
         justify-self: flex-start;
         max-width: 22rem;
     }
+
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
 }
 
 .page-header__projects-heading {
@@ -209,6 +225,10 @@ svg.page-header__logo-image {
 
     @include breakpoint(tablet) {
         margin-top: 2.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-top: 2rem;
     }
 
     .sticky-header & {
@@ -323,6 +343,10 @@ svg.page-header__logo-image {
     @include breakpoint(tablet) {
         grid-column: 5 / 7;
         justify-self: flex-end;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-column: 3 / 4;
     }
 }
 

@@ -10,6 +10,11 @@
     padding-bottom: 2.2rem;
     @include grid();
     grid-row-gap: 5rem;
+
+    @include breakpoint(small-tablet) {
+        grid-row-gap: 2rem;
+        padding-top: 4rem;
+    }
 }
 
 .projects-footer__small-title {
@@ -22,6 +27,10 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 123.02%;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
     }
 }
 
@@ -37,6 +46,10 @@
         font-size: 3.2rem;
         line-height: 110%;
     }
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 2;
+    }
 }
 
 .projects-footer__text {
@@ -50,6 +63,10 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 123.02%;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / -1;
     }
 }
 
@@ -164,10 +181,16 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
     }
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 /2;
+    }
 }
 
 .projects-footer__year {
     margin-right: 2.2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .projects-footer__contacts {
@@ -177,6 +200,10 @@
     align-self: flex-end;
     justify-self: flex-start;
     grid-column: 3 / 6;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / 3;
+    }
 }
 
 .projects-footer__contacts-mail-link {
@@ -200,7 +227,7 @@
     font-size: 5rem;
     line-height: 110%;
     text-transform: uppercase;
-
+    white-space: nowrap;
     @include breakpoint(tablet) {
         font-size: 3.2rem;
         line-height: 110%;
@@ -216,6 +243,10 @@
     flex-direction: column;
     align-items: flex-end;
     align-self: flex-end;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 3 / -1;
+    }
 }
 
 .projects-footer__made-by-text {

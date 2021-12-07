@@ -1,11 +1,20 @@
 .news {
     padding-top: 9rem;
     padding-bottom: 10rem;
+
+    @include breakpoint(small-tablet) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .news__top-row {
     @include grid();
     margin-bottom: 6.5rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 5rem;
+    }
 }
 
 .news__filters {
@@ -13,6 +22,12 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
+        display: flex;
+        grid-gap: unset;
+    }
 }
 
 .news__filters-heading {
@@ -27,6 +42,11 @@
         font-size: 1.2rem;
         line-height: 123.02%;
     }
+
+    @include breakpoint(small-tablet) {
+        width: 11.5rem;
+        margin-right: 1rem;
+    }
     &::after {
         content: '';
         flex-shrink: 0;
@@ -37,6 +57,11 @@
         margin-left: 3rem;
         margin-top: 1rem;
         flex-grow: 1;
+
+        @include breakpoint(tablet) {
+            margin-left: 1rem;
+            margin-top: 0.7rem;
+        }
 
         @include breakpoint(tablet) {
             margin-left: 1rem;
@@ -108,6 +133,12 @@
         margin-top: -1rem;
         margin-left: -0.5rem;
     }
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 2;
+        font-size: 8rem;
+        margin-top: -1rem;
+    }
 }
 
 .news__large-heading-count {
@@ -126,6 +157,11 @@
         margin-top: 1rem;
         margin-left: 2rem;
         font-weight: 500;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 2rem;
+        margin-top: 0.7rem;
     }
 }
 
@@ -311,6 +347,10 @@
 
 .news__all-articles-content {
     grid-column: 3 / -1;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / -1;
+    }
 }
 
 .news__all-articles-count {

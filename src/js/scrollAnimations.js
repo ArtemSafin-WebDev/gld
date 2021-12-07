@@ -242,7 +242,11 @@ export default function scrollAnimations() {
         });
     }
 
-    ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
+    ScrollTrigger.addEventListener('refresh', () => {
+        if (locoScroll) {
+            locoScroll.update();
+        }
+    });
     ScrollTrigger.refresh();
     window.addEventListener('load', function() {
         ScrollTrigger.refresh();

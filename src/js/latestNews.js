@@ -11,10 +11,16 @@ export default function latestNews() {
         new Swiper(container, {
             watchOverflow: true,
             spaceBetween: 20,
-            slidesPerView: 3,
+            slidesPerView: 2,
             navigation: {
                 nextEl: element.querySelector('.latest-news__slider-arrow--next'),
                 prevEl: element.querySelector('.latest-news__slider-arrow--prev')
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                }
+
             }
         });
     });
