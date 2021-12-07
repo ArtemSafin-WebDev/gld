@@ -246,11 +246,11 @@
     }
 
     &:first-child:not(:last-child) {
-        border-right: 0.1rem solid var(--dark-brown);
+        border-right: 1px solid var(--dark-brown);
     }
 
     &:last-child {
-        border-left: 0.1rem solid var(--dark-brown);
+        border-left: 1px solid var(--dark-brown);
     }
     svg {
         flex-shrink: 0;

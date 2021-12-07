@@ -19,6 +19,7 @@ import cookies from './cookies';
 import calculateSideGaps from './calculateSideGaps';
 import refreshOnResize from './refreshOnResize';
 import mobileFullheightBlocks from './mobileFullheightBlocks';
+import mobileFeatures from './mobileFeatures';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customSelects();
     masks();
     fileUpload();
+    mobileFeatures();
     anchorLinks();
     accordions();
     mediaPlayer();

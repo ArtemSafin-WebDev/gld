@@ -20,6 +20,15 @@
     @include breakpoint(mobile) {
         padding-top: 4rem;
         padding-bottom: 9rem;
+
+        &--all {
+            padding-bottom: 5rem;
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-gap: 2rem
+            }
+        }
     }
 }
 
@@ -38,7 +47,11 @@
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
         grid-gap: 2rem;
-        margin-bottom: 4.5rem;
+        margin-bottom: 4rem;
+
+        .projects--all & {
+            display: contents;
+        }
     }
 }
 
@@ -52,6 +65,13 @@
         grid-column: span 1;
         display: flex;
         grid-gap: unset;
+    }
+
+    @include breakpoint(mobile) {
+        .projects--all & {
+            order: 10;
+            grid-column: 1 / -1;
+        }
     }
 }
 
@@ -76,6 +96,13 @@
         font-size: 8rem;
         margin-top: -1rem;
     }
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 6rem;
+        line-height: 100%;
+        margin-left: -0.5rem;
+    }
 }
 
 .projects__large-heading-count {
@@ -96,6 +123,12 @@
     @include breakpoint(small-tablet) {
         font-size: 2rem;
         margin-top: 0.7rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        margin-top: 0.4rem;
+        margin-left: 1rem;
     }
 }
 
@@ -214,6 +247,12 @@
 
 .projects__results {
     @include grid();
+
+    @include breakpoint(mobile) {
+        .projects--all & {
+            display: contents;
+        }
+    }
 }
 
 .projects__about-company {
@@ -225,7 +264,7 @@
 
     @include breakpoint(mobile) {
         grid-column: 2 / -1;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -247,6 +286,14 @@
         font-weight: normal;
         font-size: 1.5rem;
         line-height: 123.02%;
+
+        .projects--all & {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+
+       
     }
     &:last-child {
         margin-bottom: 0;
@@ -261,6 +308,10 @@
         grid-gap: 1.5rem;
         display: grid;
         grid-column: 1 / -1;
+
+        .projects--all & { 
+            order: 20;
+        }
     }
 }
 
