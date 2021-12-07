@@ -13,6 +13,10 @@
     @include breakpoint(tablet) {
         margin-bottom: 4rem;
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .news-single__back {
@@ -25,6 +29,10 @@
 
     @include breakpoint(small-tablet) {
         grid-column: span 1;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: span 2;
     }
 }
 
@@ -82,6 +90,10 @@
         grid-column: span 2;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
 }
 
 .news-single__main-title {
@@ -95,6 +107,11 @@
         font-weight: 400;
         font-size: 3.2rem;
         line-height: 110%;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.7rem;
+        line-height: 100%;
     }
 }
 
@@ -113,6 +130,11 @@
     @include breakpoint(small-tablet) {
         grid-column: 1 / 2;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
 }
 
 .news-single__category {
@@ -129,6 +151,11 @@
 
     @include breakpoint(small-tablet) {
         grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
     }
 }
 
@@ -159,6 +186,10 @@
     @include breakpoint(small-tablet) {
         grid-column: 1 / -1;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include breakpoint(mobile) {
+        grid-row-gap: 3rem;
     }
 }
 
@@ -199,6 +230,11 @@
     @include breakpoint(small-tablet) {
         grid-column: span 2;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
     p {
         margin-bottom: 2rem;
         &:last-child {
@@ -214,5 +250,9 @@
 
     @include breakpoint(small-tablet) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
     }
 }

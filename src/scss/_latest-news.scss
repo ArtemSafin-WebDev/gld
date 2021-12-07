@@ -76,6 +76,7 @@
 
     @include breakpoint(mobile) {
         min-height: auto;
+        min-height: 18rem;
         padding: 1rem;
     }
 }
