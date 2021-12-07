@@ -28,6 +28,17 @@
     @include breakpoint(small-tablet) {
         grid-column: 1 /2;
     }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 2rem;
+        order: 9;
+        margin-bottom: 4rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 }
 
 
@@ -35,10 +46,17 @@
     margin-right: 2.2rem;
     white-space: nowrap;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        grid-column: span 1;
+    }
 }
 
 .simple-footer__address-text {
-
+    @include breakpoint(mobile) {
+        grid-column: span 2;
+    }
 }
 
 .simple-footer__contacts {
@@ -50,6 +68,12 @@
     grid-column: 3 / 6;
     @include breakpoint(small-tablet) {
         grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        margin: 3rem 0;
+        align-self: center;
     }
 }
 
@@ -68,6 +92,12 @@
         margin-bottom: 1rem;
     }
 
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
     
 }
 
@@ -79,6 +109,11 @@
     white-space: nowrap;
     @include breakpoint(tablet) {
         font-size: 3.2rem;
+        line-height: 110%;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 3.6rem;
         line-height: 110%;
     }
 }
@@ -96,6 +131,14 @@
         grid-column: 3 / -1;
     }
 
+    @include breakpoint(mobile) {
+        grid-column: 2 / -1;
+        justify-self: flex-start;
+        text-align: left;
+        align-items: flex-start;
+        order: 10;
+    }
+
     
 }
 
@@ -109,6 +152,12 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+    }
 }
 
 .simple-footer__made-by-logo {
@@ -118,5 +167,9 @@
 
     @include breakpoint(tablet) {
         width: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 10rem;
     }
 }
