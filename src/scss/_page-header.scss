@@ -462,7 +462,7 @@ svg.page-header__logo-image {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border: 0.2rem solid var(--light-brown);
+    border: 2px solid var(--light-brown);
     padding: 1.6rem 1.8rem;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     pointer-events: initial;
@@ -494,7 +494,7 @@ svg.page-header__logo-image {
     .biege-header-mode & {
         border-color: var(--dark-brown);
         color: var(--dark-brown);
-
+        background-color: var(--light-brown);
         &:link,
         &:visited {
             color: var(--dark-brown);

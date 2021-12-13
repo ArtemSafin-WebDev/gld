@@ -21,6 +21,10 @@
             background-color: var(--medium-brown);
             color: var(--light-brown);
 
+            svg {
+                fill: var(--light-brown);
+            }
+
             .dot-btn__dot {
                 &::before {
                     background-color: var(--light-brown);
@@ -71,6 +75,10 @@
         line-height: 1.5rem;
         padding: 1.6rem 2.5rem;
     }
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem 2.5rem;
+    }
 }
 
 .dot-btn__dot {
@@ -84,8 +92,20 @@
     align-self: stretch;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
+    svg {
+        width: 3.5rem;
+        height: 3.5rem;
+        fill: var(--dark-brown);
+        transition: fill .2s;
+
+    }
+
     @include breakpoint(tablet) {
         width: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 4.7rem;
     }
 
    
@@ -97,6 +117,12 @@
         background-color: var(--dark-brown);
         border-radius: 50%;
         transition: background-color 0.2s;
+    }
+
+    &--icon {
+        &::before {
+            display: none;
+        }
     }
 
     .dot-btn--brown & {

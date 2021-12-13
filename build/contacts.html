@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Детальная новость
+        Контакты
     </title>
 </head>
 
@@ -273,170 +273,130 @@
             </div>
         </div>
     </div>
-</div><section class="news-single">
+</div><section class="contacts">
     <div class="container">
-        <div class="news-single__top-row">
-            <a href="#" class="news-single__back">
-                <span class="news-single__back-arrow">
-                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                </span>
-                <span class="news-single__back-text">
-                    All News
-                </span>
-            </a>
-            <div class="news-single__heading-block">
-                <h1 class="news-single__main-title js-animated-header">
-                    GLD GmbH is in the process of buying a castle for renovation into housing.
-                </h1>
-                <div class="news-single__date">
-                    Date — <br> 22 sep 2021
+        <div class="contacts__top-row">
+            <div class="contacts__small-text">
+                <p>
+                    Save and increase your savings on projects by German developer GLD-Gmbh
+                </p>
+            </div>
+            <div class="contacts__heading-block">
+                <div class="contacts__large-heading-wrapper">
+                    <h1 class="contacts__large-heading">
+                        Contacts
+                    </h1>
                 </div>
-                <div class="news-single__category">
-                    News
+                <div class="contacts__info">
+                    <ul class="contacts__info-list">
+                        <li class="contacts__info-list-item">
+                            <div class="contacts__info-card">
+                                <a href="tel:+49 231 797 861 53" class="contacts__info-phone">
+                                    <span>
+                                        +49 231 797 861 53
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contacts__info-list-item">
+                            <div class="contacts__info-card">
+                                <a href="mailto:info@gld-gmbh.de" class="contacts__info-mail">
+                                    <span>
+                                        info@gld-gmbh.de
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contacts__info-list-item">
+                            <div class="contacts__info-card">
+                                <div class="contacts__info-address">
+                                    <p>
+                                        Weingartenstr. 13, 44263, Dortmund, Germany
+                                    </p>
+                                </div>
+                                <a href="#" class="contacts__info-location-link">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-location">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                    <span>
+
+
+                                        Plan a route
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
-        <div class="news-single__content">
-            <div class="news-single__content-inner">
-                <img src="img/news-single.jpg" alt="" class="news-single__content-image">
-                <div class="news-single__content-icon">
-                    <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
-                        <use xlink:href="#diagonal-arrow"></use>
-                    </svg>
-                </div>
-                <div class="news-single__content-text js-block-to-reveal">
-                    <p>
-                        We want to build big facilities.But we don't have any. Greater Leipzig - no architecture there
-                        yet. We are in the process of buying a castle for redevelopment into housing, but there is no
-                        architecture there yet either.
-                    </p>
-                    <p>
-                        In Rheinfelden, der zweitgrößten Stadt im Landkreis Lörrach direkt an der Schweizer Grenze,
-                        entstehen zwei moderne Wohnanlagen mit insgesamt 24 Wohnungen und Tiefgarageneinstellplätzen.
-                        Alle Wohnungen verfügen über die neusten Bautechnologien und erfüllen die KfW 55
-                        Energieeffizienznorm.
-                    </p>
-                </div>
+        <div class="contacts__bottom-row">
+            <h2 class="contacts__small-heading js-block-to-reveal">
+                Get In Touch
+            </h2>
+            <div class="contacts__form-wrapper">
+                <h3 class="contacts__form-heading js-animated-header">
+                    Write to us with any questions
+                </h3>
+                <form action="/" method="POST" class="form contacts__form">
+                    <div class="form__fields">
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-name">
+                                Name
+                            </label>
+                            <input type="text" name="your-name" id="your-name" class="form__field-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-phone">
+                                Phone
+                            </label>
+                            <input type="tel" name="your-name" id="your-phone" class="form__field-input js-phone-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-email">
+                                Email
+                            </label>
+                            <input type="email" name="your-email" id="your-email" class="form__field-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-comment">
+                                Message
+                            </label>
+
+                            <textarea name="your-comment" id="your-comment" class="form__field-input"
+                                required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form__controls">
+
+
+                        <button class="dot-btn dot-btn--dark-hover form__submit" type="submit">
+                            <div class="dot-btn__text">
+                                Send
+                            </div>
+                            <div class="dot-btn__dot dot-btn__dot--icon">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                    <use xlink:href="#long-diagonal-arrow"></use>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-        <ul class="news-single__other-news-list">
-            <li class="news-single__other-news-list-item">
-                <a href="#" class="latest-news__slider-card">
-                    <div class="latest-news__slider-card-content">
-
-
-                        <div class="latest-news__slider-card-info">
-                            12 sep · News
-                        </div>
-                        <h3 class="latest-news__slider-card-title">
-                            <span>
-                                GLD GmbH is in the process of buying a castle for renovation into housing.
-                            </span>
-                        </h3>
-                        <div class="latest-news__slider-card-row">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
-                                <use xlink:href="#diagonal-arrow"></use>
-                            </svg>
-                            <div class="latest-news__slider-card-description">
-                                <p>
-                                    The first successful negotiations took place.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="latest-news__slider-card-image-container">
-                        <img src="img/latest-news/1.jpg" alt="" class="latest-news__slider-card-image">
-                    </div>
-                </a>
-            </li>
-            <li class="news-single__other-news-list-item">
-                <a href="#" class="latest-news__slider-card">
-                    <div class="latest-news__slider-card-content">
-
-
-                        <div class="latest-news__slider-card-info">
-                            12 sep · News
-                        </div>
-                        <h3 class="latest-news__slider-card-title">
-                            <span>
-                                Pedestrian infrastructure is real magic.
-                            </span>
-                        </h3>
-                        <div class="latest-news__slider-card-row">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
-                                <use xlink:href="#diagonal-arrow"></use>
-                            </svg>
-                            <div class="latest-news__slider-card-description">
-                                <p>
-                                    We want to build big facilities.But we don't have any. Greater Leipzig - no
-                                    architecture there yet. We are in the process of buying a castle for redevelopment
-                                    into housing, but there is no architecture there yet either.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="latest-news__slider-card-image-container">
-                        <img src="img/latest-news/2.jpg" alt="" class="latest-news__slider-card-image">
-                    </div>
-                </a>
-            </li>
-            <li class="news-single__other-news-list-item">
-                <a href="#" class="latest-news__slider-card">
-                    <div class="latest-news__slider-card-content">
-
-
-                        <div class="latest-news__slider-card-info">
-                            14 sep · press release
-                        </div>
-                        <h3 class="latest-news__slider-card-title">
-                            <span>
-                                Developers' interest in residential projects has increased in Berlin.
-                            </span>
-                        </h3>
-                        <div class="latest-news__slider-card-row">
-                            <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
-                                <use xlink:href="#diagonal-arrow"></use>
-                            </svg>
-                            <div class="latest-news__slider-card-description">
-                                <p>
-                                    The first successful negotiations took place.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="latest-news__slider-card-image-container">
-                        <img src="img/latest-news/4.jpg" alt="" class="latest-news__slider-card-image">
-                    </div>
-                </a>
-            </li>
-        </ul>
     </div>
 </section>
-<footer class="simple-footer">
+
+<footer class="supersimple-footer">
     <div class="container">
-        <div class="simple-footer__grid">
-            <div class="simple-footer__address">
-                <div class="simple-footer__year">
-                    © 2021
-                </div>
-                <div class="simple-footer__address-text">
-                    <p>
-                        Weingartenstr. 13, <br> 44263, Dortmund, Germany.
-                    </p>
-                </div>
+        <div class="supersimple-footer__row">
+            <div class="supersimple-footer__year">
+                © 2021
             </div>
-            <div class="simple-footer__contacts">
-                <a href="mailto:info@gld-gmbh.de"
-                    class="simple-footer__contacts-mail-link"><span>info@gld-gmbh.de</span></a>
-                <a href="tel:+49 231 797-861-53" class="simple-footer__contacts-phone-link">+49 231 797-861-53</a>
-            </div>
-            <a href="#" class="simple-footer__made-by">
-                <div class="simple-footer__made-by-text">
-                    Creating a website
-                </div>
-                <img src="img/mw-logo-brown.svg" alt="" class="simple-footer__made-by-logo">
+            <a href="#" class="supersimple-footer__made-by">
+                Creating a website 
+                <img src="img/mw-logo-brown.svg" alt="" class="supersimple-footer__made-by-logo">
             </a>
         </div>
     </div>

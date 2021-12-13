@@ -4,7 +4,7 @@ export default function masks() {
     const phoneInputs = Array.from(document.querySelectorAll('.js-phone-input'));
 
     phoneInputs.forEach(input => {
-        const instance = new Inputmask({ mask: '+7 (999) 999-99-99' });
+        const instance = new Inputmask({ mask: '+ 9{0,}', greedy: true });
         instance.mask(input);
     });
 

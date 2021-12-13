@@ -1,0 +1,74 @@
+.supersimple-footer {
+    padding: 2.5rem 0;
+}
+
+.supersimple-footer__row {
+    align-items: flex-start;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
+}
+
+.supersimple-footer__year {
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        grid-column: 1 / 2;
+    }
+}
+.supersimple-footer__made-by {
+    display: inline-flex;
+    align-items: flex-start;
+
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    margin-left: 2rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        grid-column: 2 / -1;
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.supersimple-footer__made-by-logo {
+    flex-shrink: 0;
+    width: 10rem;
+    margin-left: 0.8rem;
+    margin-top: 0.3rem;
+
+    @include breakpoint(tablet) {
+        width: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 9rem;
+        margin-left: 0.2rem;
+    }
+}

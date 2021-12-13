@@ -1,0 +1,123 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+{{> biege-header }}
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__top-row">
+            <div class="contacts__small-text">
+                <p>
+                    Save and increase your savings on projects by German developer GLD-Gmbh
+                </p>
+            </div>
+            <div class="contacts__heading-block">
+                <div class="contacts__large-heading-wrapper">
+                    <h1 class="contacts__large-heading">
+                        Contacts
+                    </h1>
+                </div>
+                <div class="contacts__info">
+                    <ul class="contacts__info-list">
+                        <li class="contacts__info-list-item">
+                            <div class="contacts__info-card">
+                                <a href="tel:+49 231 797 861 53" class="contacts__info-phone">
+                                    <span>
+                                        +49 231 797 861 53
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contacts__info-list-item">
+                            <div class="contacts__info-card">
+                                <a href="mailto:info@gld-gmbh.de" class="contacts__info-mail">
+                                    <span>
+                                        info@gld-gmbh.de
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contacts__info-list-item">
+                            <div class="contacts__info-card">
+                                <div class="contacts__info-address">
+                                    <p>
+                                        Weingartenstr. 13, 44263, Dortmund, Germany
+                                    </p>
+                                </div>
+                                <a href="#" class="contacts__info-location-link">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-location">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                    <span>
+
+
+                                        Plan a route
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="contacts__bottom-row">
+            <h2 class="contacts__small-heading js-block-to-reveal">
+                Get In Touch
+            </h2>
+            <div class="contacts__form-wrapper">
+                <h3 class="contacts__form-heading js-animated-header">
+                    Write to us with any questions
+                </h3>
+                <form action="/" method="POST" class="form contacts__form">
+                    <div class="form__fields">
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-name">
+                                Name
+                            </label>
+                            <input type="text" name="your-name" id="your-name" class="form__field-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-phone">
+                                Phone
+                            </label>
+                            <input type="tel" name="your-name" id="your-phone" class="form__field-input js-phone-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-email">
+                                Email
+                            </label>
+                            <input type="email" name="your-email" id="your-email" class="form__field-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-comment">
+                                Message
+                            </label>
+
+                            <textarea name="your-comment" id="your-comment" class="form__field-input"
+                                required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form__controls">
+
+
+                        <button class="dot-btn dot-btn--dark-hover form__submit" type="submit">
+                            <div class="dot-btn__text">
+                                Send
+                            </div>
+                            <div class="dot-btn__dot dot-btn__dot--icon">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                    <use xlink:href="#long-diagonal-arrow"></use>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> supersimple-footer }}
+
+{{/content}}
+{{/extend}}
