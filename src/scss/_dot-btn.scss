@@ -33,6 +33,10 @@
         }
     }
 
+    &--white {
+        background-color: var(--light-brown);
+    }
+
     &--brown {
         background-color: var(--medium-brown);
         border-color: var(--light-brown);
@@ -96,8 +100,7 @@
         width: 3.5rem;
         height: 3.5rem;
         fill: var(--dark-brown);
-        transition: fill .2s;
-
+        transition: fill 0.2s;
     }
 
     @include breakpoint(tablet) {
@@ -107,8 +110,6 @@
     @include breakpoint(mobile) {
         width: 4.7rem;
     }
-
-   
 
     &::before {
         content: '';

@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        Контакты
+        Инвесторам
     </title>
 </head>
 
@@ -191,11 +191,17 @@
                 </div>
             </div>
         </div>
+        <div class="bg-video">
+            <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+                <source src="assets/video/home-footer-video.mp4" type="video/mp4" />
+            </video>
+        </div>
 
 
         <div class="smooth-scroll">
 
-<div class="page-header page-header--positioned-top page-header--biege">
+
+<div class="page-header page-header--positioned-top page-header--mixed">
     <div class="container">
 
 
@@ -276,105 +282,79 @@
             </div>
         </div>
     </div>
-</div><section class="contacts">
+</div>
+<section class="investors js-investors">
+
     <div class="container">
-        <div class="contacts__top-row">
-            <div class="contacts__small-text">
+        <div class="investors__top-row">
+            <div class="investors__small-text">
                 <p>
                     Save and increase your savings on projects by German developer GLD-Gmbh
                 </p>
             </div>
-            <div class="contacts__heading-block">
-                <div class="contacts__large-heading-wrapper">
-                    <h1 class="contacts__large-heading">
-                        Contacts
-                    </h1>
+            <div class="investors__top-heading-part">
+                <div class="investors__top-heading-part-text">
+                    <span class="investors__top-heading-word">
+                        Become
+                    </span>
                 </div>
-                <div class="contacts__info">
-                    <ul class="contacts__info-list">
-                        <li class="contacts__info-list-item">
-                            <div class="contacts__info-card">
-                                <a href="tel:+49 231 797 861 53" class="contacts__info-phone">
-                                    <span>
-                                        +49 231 797 861 53
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="contacts__info-list-item">
-                            <div class="contacts__info-card">
-                                <a href="mailto:info@gld-gmbh.de" class="contacts__info-mail">
-                                    <span>
-                                        info@gld-gmbh.de
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="contacts__info-list-item">
-                            <div class="contacts__info-card">
-                                <div class="contacts__info-address">
-                                    <p>
-                                        Weingartenstr. 13, 44263, Dortmund, Germany
-                                    </p>
-                                </div>
-                                <a href="#" class="contacts__info-location-link">
-                                    <svg width="14" height="14" aria-hidden="true" class="icon-location">
-                                        <use xlink:href="#location"></use>
-                                    </svg>
-                                    <span>
+                <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                    <use xlink:href="#diagonal-arrow"></use>
+                </svg>
+            </div>
+            <div class="investors__bottom-heading-part">
+                <div class="investors__bottom-heading-part-text">
+                    <span class="investors__top-heading-word">
+                        an
+                    </span>
+                    <span class="investors__top-heading-word">
+                        investor
+                    </span>
 
-
-                                        Plan a route
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
-
             </div>
         </div>
-        <div class="contacts__bottom-row">
-            <h2 class="contacts__small-heading js-block-to-reveal">
-                Get In Touch
-            </h2>
-            <div class="contacts__form-wrapper">
-                <h3 class="contacts__form-heading js-animated-header">
-                    Write to us with any questions
-                </h3>
-                <form action="/" method="POST" class="form contacts__form">
+        <div class="investors__bottom-row">
+            <div class="investors__form-block">
+                <h2 class="investors__form-heading">
+                    Find out how much you will earn by investing in GLD GMBH projects.
+                </h2>
+                <form action="/" method="POST" class="form">
                     <div class="form__fields">
                         <div class="form__field">
                             <label class="form__field-label" for="your-name">
                                 Name
                             </label>
-                            <input type="text" name="your-name" id="your-name" class="form__field-input" required="">
+                            <input type="text" name="your-name" id="your-name"
+                                class="form__field-input form__field-input--light" required="">
                         </div>
                         <div class="form__field">
                             <label class="form__field-label" for="your-phone">
                                 Phone
                             </label>
-                            <input type="tel" name="your-name" id="your-phone" class="form__field-input js-phone-input" required="">
+                            <input type="tel" name="your-name" id="your-phone"
+                                class="form__field-input form__field-input--light js-phone-input" required="">
                         </div>
                         <div class="form__field">
                             <label class="form__field-label" for="your-email">
                                 Email
                             </label>
-                            <input type="email" name="your-email" id="your-email" class="form__field-input" required="">
+                            <input type="email" name="your-email" id="your-email"
+                                class="form__field-input form__field-input--light" required="">
                         </div>
                         <div class="form__field">
                             <label class="form__field-label" for="your-comment">
                                 Message
                             </label>
 
-                            <textarea name="your-comment" id="your-comment" class="form__field-input"
-                                required=""></textarea>
+                            <textarea name="your-comment" id="your-comment"
+                                class="form__field-input form__field-input--light" required=""></textarea>
                         </div>
                     </div>
                     <div class="form__controls">
 
 
-                        <button class="dot-btn dot-btn--dark-hover form__submit" type="submit">
+                        <button class="dot-btn dot-btn--white dot-btn--dark-hover form__submit" type="submit">
                             <div class="dot-btn__text">
                                 Send
                             </div>
@@ -391,15 +371,29 @@
     </div>
 </section>
 
-<footer class="supersimple-footer">
+<footer class="simple-footer simple-footer--white">
     <div class="container">
-        <div class="supersimple-footer__row">
-            <div class="supersimple-footer__year">
-                © 2021
+        <div class="simple-footer__grid">
+            <div class="simple-footer__address">
+                <div class="simple-footer__year">
+                    © 2021
+                </div>
+                <div class="simple-footer__address-text">
+                    <p>
+                        Weingartenstr. 13, <br> 44263, Dortmund, Germany.
+                    </p>
+                </div>
             </div>
-            <a href="#" class="supersimple-footer__made-by">
-                Creating a website 
-                <img src="img/mw-logo-brown.svg" alt="" class="supersimple-footer__made-by-logo">
+            <div class="simple-footer__contacts">
+                <a href="mailto:info@gld-gmbh.de"
+                    class="simple-footer__contacts-mail-link"><span>info@gld-gmbh.de</span></a>
+                <a href="tel:+49 231 797-861-53" class="simple-footer__contacts-phone-link">+49 231 797-861-53</a>
+            </div>
+            <a href="#" class="simple-footer__made-by">
+                <div class="simple-footer__made-by-text">
+                    Creating a website
+                </div>
+                <img src="img/mw-logo.svg" alt="" class="simple-footer__made-by-logo">
             </a>
         </div>
     </div>

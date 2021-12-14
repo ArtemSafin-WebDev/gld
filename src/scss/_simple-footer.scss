@@ -1,5 +1,7 @@
 .simple-footer {
-
+    &--white {
+        color: var(--light-brown);
+    }
 }
 
 .simple-footer__grid {
@@ -81,7 +83,7 @@
     font-size: 1.5rem;
     line-height: 2.2rem;
     display: inline-flex;
-   
+    text-transform: uppercase;
     margin-bottom: 1.4rem;
 
     @include underline();

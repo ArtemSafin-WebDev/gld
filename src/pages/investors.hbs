@@ -1,0 +1,98 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+{{> mixed-header }}
+
+<section class="investors js-investors">
+
+    <div class="container">
+        <div class="investors__top-row">
+            <div class="investors__small-text">
+                <p>
+                    Save and increase your savings on projects by German developer GLD-Gmbh
+                </p>
+            </div>
+            <div class="investors__top-heading-part">
+                <div class="investors__top-heading-part-text">
+                    <span class="investors__top-heading-word">
+                        Become
+                    </span>
+                </div>
+                <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                    <use xlink:href="#diagonal-arrow"></use>
+                </svg>
+            </div>
+            <div class="investors__bottom-heading-part">
+                <div class="investors__bottom-heading-part-text">
+                    <span class="investors__top-heading-word">
+                        an
+                    </span>
+                    <span class="investors__top-heading-word">
+                        investor
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="investors__bottom-row">
+            <div class="investors__form-block">
+                <h2 class="investors__form-heading">
+                    Find out how much you will earn by investing in GLD GMBH projects.
+                </h2>
+                <form action="/" method="POST" class="form">
+                    <div class="form__fields">
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-name">
+                                Name
+                            </label>
+                            <input type="text" name="your-name" id="your-name"
+                                class="form__field-input form__field-input--light" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-phone">
+                                Phone
+                            </label>
+                            <input type="tel" name="your-name" id="your-phone"
+                                class="form__field-input form__field-input--light js-phone-input" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-email">
+                                Email
+                            </label>
+                            <input type="email" name="your-email" id="your-email"
+                                class="form__field-input form__field-input--light" required="">
+                        </div>
+                        <div class="form__field">
+                            <label class="form__field-label" for="your-comment">
+                                Message
+                            </label>
+
+                            <textarea name="your-comment" id="your-comment"
+                                class="form__field-input form__field-input--light" required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form__controls">
+
+
+                        <button class="dot-btn dot-btn--white dot-btn--dark-hover form__submit" type="submit">
+                            <div class="dot-btn__text">
+                                Send
+                            </div>
+                            <div class="dot-btn__dot dot-btn__dot--icon">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                    <use xlink:href="#long-diagonal-arrow"></use>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> simple-footer-white }}
+
+{{/content}}
+{{/extend}}

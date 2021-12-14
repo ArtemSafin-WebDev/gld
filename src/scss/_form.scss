@@ -39,30 +39,38 @@
     font-size: 2.5rem;
     line-height: 1.2;
     padding: 0 1.6rem;
-    transition: box-shadow .2s;
+    transition: box-shadow 0.2s;
     color: var(--dark-brown);
+    @include placeholder {
+        color: var(--dark-brown);
+    }
 
+    &:focus {
+        box-shadow: 0 0 0 1px var(--dark-brown);
+    }
+    &--light {
+        border-color: var(--light-brown);
+        color: var(--light-brown);
+
+        @include placeholder {
+            color: var(--light-brown);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px var(--light-brown);
+        }
+    }
 
     @include breakpoint(tablet) {
         height: 5rem;
         font-size: 1.6rem;
         line-height: 1.2;
-        
     }
-
 
     @include breakpoint(mobile) {
         height: 4.5rem;
         font-size: 1.6rem;
     }
-
-    @include placeholder {
-        color: var(--dark-brown);
-    }
-    &:focus {
-        box-shadow: 0 0 0 1px var(--dark-brown);
-    }
-    
 }
 
 textarea.form__field-input {
@@ -81,7 +89,6 @@ textarea.form__field-input {
     }
 }
 
-
 .form__controls {
     margin-top: 4rem;
     display: grid;
@@ -92,12 +99,16 @@ textarea.form__field-input {
         display: flex;
         margin-top: 3rem;
     }
-
-
 }
 
 .form__submit {
     grid-column: 1 / 2;
+
+    .dot-btn__text {
+        width: 15rem;
+
+        
+    }
 
     @include breakpoint(tablet) {
         grid-column: 1 / 2;

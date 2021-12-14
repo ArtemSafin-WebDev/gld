@@ -5,6 +5,11 @@
     z-index: 50;
     pointer-events: none;
 
+
+    &--mixed {
+        color: var(--light-brown);
+    }
+
     &--positioned-top {
         padding-bottom: 4.5rem;
 
@@ -55,6 +60,11 @@ svg.page-header__logo-image {
     transition: fill 0.2s;
     .page-header--biege &,
     .biege-header-mode & {
+        fill: var(--medium-brown);
+    }
+
+
+    .page-header--mixed & {
         fill: var(--medium-brown);
     }
 }

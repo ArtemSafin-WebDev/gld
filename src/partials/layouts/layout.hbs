@@ -22,10 +22,20 @@
 
     <div class="page-content">
         {{> menu }}
-        <div class="smooth-scroll">
-        {{#block "main"}}
 
-        {{/block}}
+        {{#if hasVideo}}
+        <div class="bg-video">
+            <video class="lazyload" muted="" data-autoplay="" loop playsinline preload="none">
+                <source src="assets/video/home-footer-video.mp4" type="video/mp4" />
+            </video>
+        </div>
+        {{/if}}
+
+
+        <div class="smooth-scroll">
+            {{#block "main"}}
+
+            {{/block}}
         </div>
         {{> ie-placeholder }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

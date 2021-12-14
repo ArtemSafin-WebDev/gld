@@ -23,6 +23,8 @@
         --content-padding: 1rem;
     }
 
+   
+
     
 }
 
@@ -42,6 +44,10 @@ html {
     @include breakpoint(small-tablet) {
         font-size: 10px;
     }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 9px;
+    }
 }
 
 body {
@@ -54,6 +60,8 @@ body {
     color: var(--dark-brown);
     background: var(--light-brown);
 }
+
+
 
 main {
     display: block;
@@ -205,6 +213,28 @@ th {
     body {
         height: auto;
         overflow: hidden;
+    }
+}
+
+.bg-video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--dark-brown);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.02);
     }
 }
 

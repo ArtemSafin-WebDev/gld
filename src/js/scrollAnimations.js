@@ -126,6 +126,41 @@ export default function scrollAnimations() {
         });
     });
 
+    const investors = Array.from(document.querySelectorAll('.js-investors'));
+
+    investors.forEach(element => {
+        const topText = element.querySelector('.investors__top-heading-part-text');
+        const bottomText = element.querySelector('.investors__bottom-heading-part-text');
+
+        ScrollTrigger.matchMedia({
+            '(min-width: 641px)': () => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '.page-header',
+                        start: 'top+=80 top',
+                        end: () => `+=${window.innerHeight}`,
+                        scrub: true,
+                        markers: false,
+                        ...scrollerOptions
+                    }
+                });
+
+                tl.to(topText, {
+                    x: () => -1 * convertRemToPixels(10),
+                    duration: 0.6
+                });
+                tl.to(
+                    bottomText,
+                    {
+                        x: () => convertRemToPixels(10),
+                        duration: 0.6
+                    },
+                    0
+                );
+            }
+        });
+    });
+
     function initializeParallaxForProjects() {
         const cards = Array.from(document.querySelectorAll('.projects__results-card'));
 
