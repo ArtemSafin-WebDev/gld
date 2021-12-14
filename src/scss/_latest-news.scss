@@ -52,13 +52,17 @@
     @include breakpoint(mobile) {
         border-width: 1px;
     }
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touch &:hover {
         .latest-news__slider-card-title {
             color: currentColor;
             & > span {
                 background-size: 100% 0.2rem;
             }
+        }
+
+        .latest-news__slider-card-image {
+            transform: scale(1.05);
+            transition: transform .6s cubic-bezier(0.33, 1, 0.68, 1);
         }
     }
 }
@@ -190,6 +194,9 @@
 
 .latest-news__slider-card-image-container {
     position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &::before {
         content: '';
         display: block;
@@ -204,6 +211,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .4s ease;
 }
 
 .latest-news__slider-controls {
@@ -275,7 +283,7 @@
 
     .no-touch &:not(.swiper-button-disabled):hover,
     .touch &:not(.swiper-button-disabled):active {
-        background-color: var(--dark-brown);
+        background-color: var(--medium-brown);
 
         svg {
             fill: var(--light-brown);

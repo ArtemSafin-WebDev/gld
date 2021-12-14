@@ -5,7 +5,6 @@
     z-index: 50;
     pointer-events: none;
 
-
     &--mixed {
         color: var(--light-brown);
     }
@@ -23,7 +22,7 @@
     }
 
     @include breakpoint(mobile) {
-        padding-top: 4.5rem;
+        padding-top: 2.2rem;
     }
 }
 
@@ -63,7 +62,6 @@ svg.page-header__logo-image {
         fill: var(--medium-brown);
     }
 
-
     .page-header--mixed & {
         fill: var(--medium-brown);
     }
@@ -85,11 +83,24 @@ svg.page-header__logo-image {
     transition: opacity 0.3s, visibility 0s linear 0.3s;
     pointer-events: initial;
     margin-top: 0.3rem;
+
+    @include breakpoint(mobile) {
+        opacity: 1;
+        visibility: inherit;
+        transition: none;
+
+        .home-intro & {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0s linear 0.3s;
+        }
+    }
     .sticky-header & {
         opacity: 1;
         visibility: inherit;
         transition: opacity 0.3s, visibility 0.3s;
     }
+
     svg {
         display: block;
         width: 3.6rem;
@@ -119,6 +130,20 @@ svg.page-header__logo-image {
 .page-header__nav {
     transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
     transform-origin: center top;
+
+    @include breakpoint(mobile) {
+        transform: scaleY(0);
+        opacity: 0;
+        visibility: hidden;
+        transition: none;
+
+        .home-intro & {
+            opacity: 1;
+            visibility: inherit;
+            transform: scaleY(1);
+            transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+        }
+    }
 
     .sticky-header & {
         transform: scaleY(0);
@@ -173,10 +198,6 @@ svg.page-header__logo-image {
         grid-column: 3 / 5;
         justify-self: flex-start;
         max-width: 22rem;
-    }
-
-    @include breakpoint(small-tablet) {
-        display: none;
     }
 }
 
@@ -388,11 +409,7 @@ svg.page-header__logo-image {
 
     @include breakpoint(small-tablet) {
         grid-column: 3 / 4;
-    }
-
-    @include breakpoint(mobile) {
-        grid-column: 2 / 4;
-        grid-row: 1 / 2;
+        display: none;
     }
 }
 
@@ -402,10 +419,6 @@ svg.page-header__logo-image {
     gap: 1rem;
     margin-right: 2rem;
     flex-shrink: 0;
-
-    @include breakpoint(mobile) {
-        display: none;
-    }
 }
 
 .page-header__languages-link {
@@ -509,9 +522,20 @@ svg.page-header__logo-image {
         &:visited {
             color: var(--dark-brown);
         }
+    }
 
-        .no-touch &:hover,
-        .touch &:active {
+
+    .no-touch .page-header--biege &,
+    .no-touch.biege-header-mode & {
+        &:hover {
+            border-color: var(--dark-brown);
+            background-color: var(--medium-brown);
+            color: var(--light-brown);
+        }
+    }
+    .touch .page-header--biege &,
+    .touch.biege-header-mode & {
+        &:active {
             border-color: var(--dark-brown);
             background-color: var(--medium-brown);
             color: var(--light-brown);

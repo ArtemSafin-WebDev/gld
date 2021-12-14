@@ -55,12 +55,15 @@
 
     @include breakpoint(small-tablet) {
         grid-column: 1 / -1;
+        margin-top: 0;
+        grid-row: 1 / 2;
     }
 
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 123.02%;
+        grid-row: initial;
     }
 }
 
@@ -71,19 +74,55 @@
     line-height: 110%;
     text-transform: uppercase;
 
+    .lineChild:nth-child(1) {
+        display: none !important;
+    }
+    .lineChild:nth-child(2) {
+        padding-left: 27rem;
+    }
+
     @include breakpoint(tablet) {
         font-weight: normal;
         font-size: 3.2rem;
         line-height: 110%;
+        .lineChild:nth-child(2) {
+            padding-left: 16rem;
+        }
     }
 
     @include breakpoint(small-tablet) {
         grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        .lineChild:nth-child(2) {
+            padding-left: 25rem;
+        }
     }
 
     @include breakpoint(mobile) {
         font-size: 2.7rem;
         line-height: 100%;
+        grid-row: initial;
+        .lineChild:nth-child(2) {
+            padding-left: 12rem;
+        }
+    }
+}
+
+.about__heading-indent {
+    width: 27rem;
+    display: inline-block;
+    height: 1px;
+
+    @include breakpoint(tablet) {
+        width: 16rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 25rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 12rem;
     }
 }
 
