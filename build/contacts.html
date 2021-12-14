@@ -405,7 +405,62 @@
     </div>
 </footer>
         </div>
+        <div class="loader">
+        
+        </div>
+        
         <style>
+            .loader {
+                position: fixed;
+                left: 50%;
+                top: 0;
+                width: 130%;
+                height: 100%;
+                z-index: 500;
+                background-color: #5f4b41;
+                transform: translateX(-50%) translateX(0%) skewX(-10deg);
+        
+            }
+        
+            .animatable .loader {
+                transform: translateX(-50%) translateX(-100%) skewX(-10deg);
+                transition: transform 1s ease-out, visibility 0s linear 1s;
+                visibility: hidden;
+            }
+        
+            .transition-loader .loader {
+                transform: translateX(-50%) translateX(100%) skewX(-10deg) !important;
+                visibility: visible;
+                transition: none !important;
+            }
+        
+            .transition-loader-active .loader {
+                transform: translateX(-50%) translateX(0%) skewX(-10deg) !important;
+                transition: transform 1s ease-out !important;
+            }
+        
+            @media screen and (max-width: 640px) {
+                .loader {
+                    width: 135%;
+                }
+                .animatable .loader {
+        
+                    transition: transform .5s ease-out, visibility 0s linear .5s;
+        
+                }
+        
+        
+                .transition-loader .loader {
+        
+                    transition: none !important;
+                }
+        
+                .transition-loader-active .loader {
+        
+                    transition: transform .5s ease-out !important;
+                }
+            }
+        </style>        <style>
             .ie-placeholder {
                 z-index: 4000;
                 position: fixed;

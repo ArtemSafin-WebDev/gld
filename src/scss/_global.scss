@@ -14,7 +14,6 @@
     --medium-brown: #a98774;
     --dark-brown: #5f4b41;
 
-
     @include breakpoint(small-tablet) {
         --content-padding: 2rem;
     }
@@ -22,10 +21,6 @@
     @include breakpoint(mobile) {
         --content-padding: 1rem;
     }
-
-   
-
-    
 }
 
 html {
@@ -39,7 +34,7 @@ html {
     @include breakpoint(tablet) {
         font-size: 10px;
         font-size: clamp(5px, 0.98vw, 10px);
-    } 
+    }
 
     @include breakpoint(small-tablet) {
         font-size: 10px;
@@ -59,9 +54,11 @@ body {
     font-family: var(--inter);
     color: var(--dark-brown);
     background: var(--light-brown);
+
+    &.no-touch {
+        overflow: hidden;
+    }
 }
-
-
 
 main {
     display: block;

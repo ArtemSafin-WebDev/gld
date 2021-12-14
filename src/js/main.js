@@ -20,6 +20,7 @@ import calculateSideGaps from './calculateSideGaps';
 import refreshOnResize from './refreshOnResize';
 import mobileFullheightBlocks from './mobileFullheightBlocks';
 import mobileFeatures from './mobileFeatures';
+import { loader } from './loader';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     setScrollbarWidth();
     calculateSideGaps();
+    loader();
     validation();
     customSelects();
     masks();
@@ -45,9 +47,15 @@ document.addEventListener('DOMContentLoaded', function() {
    
     refreshOnResize();
     mobileFullheightBlocks();
+
+    setTimeout(() => {
+        document.body.classList.add('animatable');
+    }, 3000)
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300);
+    setTimeout(() => {
+        document.body.classList.add('animatable');
+    }, 300);
 })
