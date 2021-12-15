@@ -216,6 +216,10 @@
         visibility: inherit;
         transition: opacity 0.4s ease 0.3s, visibility 0.7s;
     }
+
+    @include breakpoint(mobile) {
+        margin-top: -0.2rem;
+    }
 }
 
 .menu__sidebar-logo-image {
@@ -238,7 +242,7 @@
         width: 10rem;
         height: 6rem;
         left: 0;
-        top: -.67rem;
+        top: 0;
     }
 }
 
@@ -422,7 +426,8 @@
     }
 
     @include breakpoint(mobile) {
-        margin-top: -0.4rem;
+        margin-top: 0;
+        margin-left: -0.3rem;
     }
 
     .menu-open & {

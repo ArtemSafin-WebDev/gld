@@ -235,7 +235,7 @@ export default function scrollAnimations() {
     if (pageHeader) {
         ScrollTrigger.create({
             trigger: pageHeader,
-            start: 'top+=5 top',
+            start: () => !window.matchMedia("(max-width: 640px)").matches ? 'top+=5 top' : 'top top',
 
             end: 99999999999999,
             pin: true,

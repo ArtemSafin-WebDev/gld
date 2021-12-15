@@ -22,6 +22,10 @@ import mobileFullheightBlocks from './mobileFullheightBlocks';
 import mobileFeatures from './mobileFeatures';
 import { loader } from './loader';
 
+import { SplitText } from 'gsap/SplitText';
+import gsap from 'gsap';
+
+gsap.registerPlugin(SplitText);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,18 +48,61 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     scrollAnimations();
     cookies();
-   
+
     refreshOnResize();
     mobileFullheightBlocks();
 
     setTimeout(() => {
         document.body.classList.add('animatable');
-    }, 3000)
+        homeIntro();
+    }, 3000);
 });
+
+
+let homeIntroAnimated = false;
+
+function homeIntro() {
+  
+    const homeIntro = document.querySelector('.home-intro');
+    if (!homeIntro || homeIntroAnimated) return;
+    homeIntroAnimated = true;
+    const heading = document.querySelector('.home-intro__main-heading');
+
+    const tl = gsap.timeline();
+
+    new SplitText(heading, { type: 'lines', linesClass: 'lineChild' });
+
+    const lines = Array.from(heading.querySelectorAll('.lineChild'));
+
+    tl.from(lines, {
+        autoAlpha: 0,
+        yPercent: 50,
+        stagger: 0.2,
+        duration: 0.4
+    });
+
+    const otherElements = [
+        document.querySelector('.page-header__logo'),
+        document.querySelector('.page-header__nav-wrapper'),
+        document.querySelector('.page-header__projects'),
+        document.querySelector('.page-header__info'),
+        document.querySelector('.home-intro__cookies'),
+        document.querySelector('.home-intro__scroll-down-link')
+    ];
+
+    tl.from(otherElements, {
+        autoAlpha: 0,
+        y: 50,
+        stagger: 0.1,
+        duration: 0.4,
+        clearProps: 'all'
+    });
+}
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => {
         document.body.classList.add('animatable');
+        homeIntro();
     }, 300);
-})
+});
