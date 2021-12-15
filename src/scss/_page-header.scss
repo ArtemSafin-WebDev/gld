@@ -9,6 +9,10 @@
         color: var(--light-brown);
     }
 
+    &--white {
+        color: var(--light-brown);
+    }
+
     &--positioned-top {
         padding-bottom: 4.5rem;
 
@@ -68,6 +72,10 @@ svg.page-header__logo-image {
 
     .page-header--mixed & {
         fill: var(--medium-brown);
+    }
+
+    .page-header--white & {
+        fill: var(--light-brown);
     }
 }
 .page-header__nav-wrapper {
