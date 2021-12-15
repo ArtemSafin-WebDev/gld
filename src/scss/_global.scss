@@ -26,10 +26,19 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
-    font-size: clamp(5px, 0.52vw, 25px);
+
     -webkit-text-size-adjust: 100%;
 
+
+    @media screen and (min-width: 2560px) {
+        font-size: clamp(5px, 0.52vw, 25px);
+    }
+
     @include noHighlight();
+
+    @media screen and (max-width: 1680px) {
+        font-size: clamp(5px, 0.6vw, 25px);
+    }
 
     @include breakpoint(tablet) {
         font-size: 10px;
