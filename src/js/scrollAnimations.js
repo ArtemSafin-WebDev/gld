@@ -333,27 +333,37 @@ export default function scrollAnimations() {
             0
         );
     });
-    // const projectFooters = Array.from(document.querySelectorAll('.js-project-footer'));
+    const projectFooters = Array.from(document.querySelectorAll('.js-project-footer'));
 
-    // projectFooters.forEach(element => {
-    //     const wrapper = element.querySelector('.project-footer__bg-parallax-wrapper');
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: element,
-    //             start: 'top bottom',
-    //             end: 'bottom bottom',
-    //             scrub: true,
-    //             ...scrollerOptions,
-              
-    //         }
-    //     });
+    projectFooters.forEach(element => {
+        const wrapper = element.querySelector('.project-footer__bg-parallax-wrapper');
+        const inner = element.querySelector('.project-footer__inner');
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top bottom',
+                end: 'bottom bottom',
+                scrub: true,
+                ...scrollerOptions
+            }
+        });
 
-    //     tl.from(element, {
-    //         yPercent: 100,
-    //         duration: 0.4,
-    //         ease: 'none'
-    //     });
-    // });
+        tl.from(inner, {
+            yPercent: -100,
+            duration: 0.4,
+            ease: 'none'
+        });
+
+        tl.from(
+            wrapper,
+            {
+                yPercent: 14,
+                duration: 0.4,
+                ease: 'none'
+            },
+            0
+        );
+    });
 
     const homeIntro = document.querySelector('.home-intro');
 
