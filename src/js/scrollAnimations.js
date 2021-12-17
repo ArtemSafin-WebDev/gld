@@ -202,13 +202,11 @@ export default function scrollAnimations() {
 
     initializeParallaxForProjects();
 
-
-
     function projectGalleryParallax() {
-        const cards = Array.from(document.querySelectorAll('.projects__results-card'));
+        const cards = Array.from(document.querySelectorAll('.project-gallery__card'));
 
         cards.forEach(element => {
-            const parallaxWrapper = element.querySelector('.projects__results-card-image-parallax-wrapper');
+            const parallaxWrapper = element.querySelector('.project-gallery__card-parallax-wrapper');
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: element,
@@ -305,6 +303,57 @@ export default function scrollAnimations() {
             });
         }
     }
+
+    const onFootIllustrations = Array.from(document.querySelectorAll('.js-project-proximity'));
+
+    onFootIllustrations.forEach(element => {
+        const human = element.querySelector('.project-location__proximity-illustration-scale-human');
+        const scale = element.querySelector('.project-location__proximity-illustration-scale-rule');
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+                ...scrollerOptions
+            }
+        });
+
+        tl.to(scale, {
+            duration: 0.4,
+            '--progress': 1
+        });
+
+        tl.to(
+            human,
+            {
+                duration: 0.4,
+                x: () => scale.offsetWidth
+            },
+            0
+        );
+    });
+    // const projectFooters = Array.from(document.querySelectorAll('.js-project-footer'));
+
+    // projectFooters.forEach(element => {
+    //     const wrapper = element.querySelector('.project-footer__bg-parallax-wrapper');
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: element,
+    //             start: 'top bottom',
+    //             end: 'bottom bottom',
+    //             scrub: true,
+    //             ...scrollerOptions,
+              
+    //         }
+    //     });
+
+    //     tl.from(element, {
+    //         yPercent: 100,
+    //         duration: 0.4,
+    //         ease: 'none'
+    //     });
+    // });
 
     const homeIntro = document.querySelector('.home-intro');
 

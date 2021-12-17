@@ -12,7 +12,9 @@
     height: 100%;
     background-color: var(--dark-brown);
     z-index: -1;
-
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     &::after {
         content: '';
         position: absolute;
@@ -22,6 +24,7 @@
         height: 100%;
         background: linear-gradient(0deg, rgba(77, 61, 53, 0.5), rgba(77, 61, 53, 0.5));
         mix-blend-mode: multiply;
+        z-index: 3;
     }
 }
 
