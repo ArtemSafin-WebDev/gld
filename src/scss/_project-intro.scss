@@ -29,10 +29,10 @@
 
 .project-intro__bg-parallax-wrapper {
     position: absolute;
-    left: 0;
     top: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     transform: translateZ(0);
 }
 
@@ -68,14 +68,28 @@
     text-transform: uppercase;
 }
 
+.project-intro__main-heading-wrapper {
+    grid-column: 3 / -1;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
 .project-intro__main-heading {
   
     display: flex;
     align-items: flex-start;
-  
-    grid-column: 3 / -1;
-    margin-top: -1rem;
-    margin-bottom: 3rem;
+    transform: translateY(100%);
+    transition: transform .5s;
+    .animatable & {
+        transform: translateY(0%);
+        transition: .4s ease-out;
+        transition-delay: .4s;
+    }
+   
+    
 }
 
 .project-intro__main-heading-number {

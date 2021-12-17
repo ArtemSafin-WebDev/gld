@@ -1,0 +1,149 @@
+.project-gallery {
+    padding-bottom: 3rem;
+}
+
+.project-gallery__selected-image {
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    margin-bottom: 5rem;
+    height: 100vh;
+
+    @include breakpoint(tablet) {
+        height: auto;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(77, 61, 53, 0.2), rgba(77, 61, 53, 0.2));
+        mix-blend-mode: multiply;
+    }
+}
+
+.project-gallery__selected-image-parallax-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120%;
+    transform: translateZ(0);
+}
+
+.project-gallery__selected-image-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-gallery__row {
+    margin-bottom: 32rem;
+    @include grid();
+}
+
+.project-gallery__first-letter {
+    font-weight: normal;
+    font-size: 5rem;
+    line-height: 110%;
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+}
+
+.project-gallery__words {
+    grid-column: 3 / -1;
+    font-weight: normal;
+    font-size: 5rem;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.project-gallery__words-top {
+}
+
+.project-gallery__words-bottom {
+    // padding-left: 14rem;
+}
+
+.project-gallery__grid {
+    @include grid();
+}
+
+.project-gallery__card {
+    position: relative;
+    grid-column: span 3;
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+
+    &:nth-child(3) {
+        grid-column: span 4;
+        &::before {
+            padding-bottom: 77.4%;
+        }
+    }
+    &:nth-child(4) {
+        grid-column: span 2;
+        &::before {
+            padding-bottom: 157.7%;
+        }
+    }
+
+    &:nth-child(5) {
+        grid-column: 1 / -1;
+    }
+}
+
+.project-gallery__card-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(77, 61, 53, 0.2), rgba(77, 61, 53, 0.2));
+    }
+}
+
+.project-gallery__card-parallax-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+}
+
+.project-gallery__card-parallax-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

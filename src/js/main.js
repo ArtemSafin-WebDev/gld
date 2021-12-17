@@ -24,6 +24,7 @@ import { loader } from './loader';
 
 import { SplitText } from 'gsap/SplitText';
 import gsap from 'gsap';
+import animatedHeadings from './animatedHeaders';
 
 gsap.registerPlugin(SplitText);
 
@@ -101,6 +102,7 @@ function homeIntro() {
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    animatedHeadings();
     setTimeout(() => {
         document.body.classList.add('animatable');
         homeIntro();

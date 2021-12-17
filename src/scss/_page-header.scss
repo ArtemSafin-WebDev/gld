@@ -65,6 +65,10 @@
 svg.page-header__logo-image {
     fill: var(--light-brown);
     transition: fill 0.2s;
+
+    .page-header--white & {
+        fill: var(--light-brown);
+    }
     .page-header--biege &,
     .biege-header-mode & {
         fill: var(--medium-brown);
@@ -74,9 +78,7 @@ svg.page-header__logo-image {
         fill: var(--medium-brown);
     }
 
-    .page-header--white & {
-        fill: var(--light-brown);
-    }
+  
 }
 .page-header__nav-wrapper {
     grid-column: 2 / 3;

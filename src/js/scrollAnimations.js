@@ -19,6 +19,8 @@ export default function scrollAnimations() {
             multiplier: 0.8
         });
 
+        window.locoScroll = locoScroll;
+
         locoScroll.on('scroll', ScrollTrigger.update);
 
         ScrollTrigger.scrollerProxy('.smooth-scroll', {
@@ -80,29 +82,6 @@ export default function scrollAnimations() {
         }
     });
 
-    const animatedHeadings = Array.from(document.querySelectorAll('.js-animated-header'));
-
-    animatedHeadings.forEach(element => {
-        new SplitText(element, { type: 'lines', linesClass: 'lineChild' });
-
-        const lines = Array.from(element.querySelectorAll('.lineChild'));
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: element,
-                start: 'top bottom-=80',
-                ...scrollerOptions
-            }
-        });
-
-        tl.from(lines, {
-            autoAlpha: 0,
-            yPercent: 50,
-            stagger: 0.2,
-            duration: 0.6
-        });
-    });
-
     const blocksToReveal = Array.from(document.querySelectorAll('.js-block-to-reveal'));
 
     blocksToReveal.forEach(element => {
@@ -160,6 +139,40 @@ export default function scrollAnimations() {
             }
         });
     });
+    const projectSlidingWords = Array.from(document.querySelectorAll('.js-project-sliding-words'));
+
+    projectSlidingWords.forEach(element => {
+        const topText = element.querySelector('.project-gallery__words-top');
+        const bottomText = element.querySelector('.project-gallery__words-bottom');
+
+        ScrollTrigger.matchMedia({
+            '(min-width: 641px)': () => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true,
+                        markers: false,
+                        ...scrollerOptions
+                    }
+                });
+
+                tl.to(topText, {
+                    x: () => -1 * convertRemToPixels(7),
+                    duration: 0.6
+                });
+                tl.to(
+                    bottomText,
+                    {
+                        x: () => convertRemToPixels(7),
+                        duration: 0.6
+                    },
+                    0
+                );
+            }
+        });
+    });
 
     function initializeParallaxForProjects() {
         const cards = Array.from(document.querySelectorAll('.projects__results-card'));
@@ -188,6 +201,36 @@ export default function scrollAnimations() {
     }
 
     initializeParallaxForProjects();
+
+
+
+    function projectGalleryParallax() {
+        const cards = Array.from(document.querySelectorAll('.projects__results-card'));
+
+        cards.forEach(element => {
+            const parallaxWrapper = element.querySelector('.projects__results-card-image-parallax-wrapper');
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true,
+                    ...scrollerOptions
+                }
+            });
+
+            tl.to(parallaxWrapper, {
+                y: () => {
+                    const pixels = convertRemToPixels(10);
+                    console.log('10rem equals pixels: ', pixels);
+                    return pixels;
+                },
+                duration: 0.4
+            });
+        });
+    }
+
+    projectGalleryParallax();
 
     const removeOverlays = Array.from(document.querySelectorAll('.js-remove-overlay'));
 
@@ -235,7 +278,7 @@ export default function scrollAnimations() {
     if (pageHeader) {
         ScrollTrigger.create({
             trigger: pageHeader,
-            start: () => !window.matchMedia("(max-width: 640px)").matches ? 'top+=5 top' : 'top top',
+            start: () => (!window.matchMedia('(max-width: 640px)').matches ? 'top+=5 top' : 'top top'),
 
             end: 99999999999999,
             pin: true,
@@ -247,7 +290,7 @@ export default function scrollAnimations() {
         if (document.querySelector('[data-biege-header-start]')) {
             ScrollTrigger.create({
                 trigger: '[data-biege-header-start]',
-                start: 'top top',
+                start: () => `top-=${document.querySelector('.page-header__row').offsetHeight} top`,
                 endTrigger: '[data-biege-header-end]',
                 end: 'top top',
                 pinSpacing: false,
@@ -278,6 +321,44 @@ export default function scrollAnimations() {
 
         tl.to('.home-intro__bg-parallax-wrapper', {
             yPercent: 10,
+            duration: 0.4
+        });
+    }
+    const projectIntro = document.querySelector('.project-intro');
+
+    if (projectIntro) {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: projectIntro,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true,
+                ...scrollerOptions
+            }
+        });
+
+        tl.to('.project-intro__bg-parallax-wrapper', {
+            yPercent: 10,
+            duration: 0.4
+        });
+    }
+    const selectedImage = document.querySelector('.js-selected-image');
+
+    if (selectedImage) {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: selectedImage,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+                ...scrollerOptions
+            }
+        });
+
+        const wrapper = selectedImage.querySelector('.project-gallery__selected-image-parallax-wrapper');
+
+        tl.to(wrapper, {
+            yPercent: 20,
             duration: 0.4
         });
     }
