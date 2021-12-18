@@ -1,5 +1,9 @@
 .project-gallery {
     padding-bottom: 3rem;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 1.5rem;
+    }
 }
 
 .project-gallery__selected-image {
@@ -10,8 +14,11 @@
     margin-bottom: 5rem;
     height: 100vh;
 
+
+
     @include breakpoint(tablet) {
         height: auto;
+        margin-bottom: 3rem;
         &::before {
             content: '';
             display: block;
@@ -52,6 +59,14 @@
 .project-gallery__row {
     margin-bottom: 32rem;
     @include grid();
+
+    @include breakpoint(tablet) {
+        margin-bottom: 18rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 14rem;
+    }
 }
 
 .project-gallery__first-letter {
@@ -60,6 +75,23 @@
     line-height: 110%;
     text-transform: uppercase;
     grid-column: 2 / 3;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
+
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / 2;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 3rem;
+        line-height: 100%;
+    }
 }
 
 .project-gallery__words {
@@ -68,6 +100,22 @@
     font-size: 5rem;
     line-height: 110%;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 110%;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 3rem;
+        line-height: 100%;
+    }
 }
 
 .project-gallery__words-top {
@@ -79,6 +127,11 @@
 
 .project-gallery__grid {
     @include grid();
+
+
+    @include breakpoint(small-tablet) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
 }
 
 .project-gallery__card {
@@ -107,6 +160,15 @@
     &:nth-child(5) {
         grid-column: 1 / -1;
     }
+
+
+    // @include breakpoint(small-tablet) {
+    //     grid-column: span 1 !important;
+    //     &::before {
+    //         content: '';
+    //         padding-bottom: 56.25% !important;
+    //     }
+    // }
 }
 
 .project-gallery__card-image-container {

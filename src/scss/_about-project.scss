@@ -1,11 +1,29 @@
 .about-project {
     padding-top: 6rem;
     padding-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .about-project__top-row {
     @include grid();
     margin-bottom: 22rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 18rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 14rem;
+    }
 }
 
 .about-project__small-heading {
@@ -13,6 +31,22 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 123.02%;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / 2;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 }
 
 .about-project__text {
@@ -20,17 +54,39 @@
     font-weight: 500;
     font-size: 2.5rem;
     line-height: 110%;
-    
+
+    @include breakpoint(tablet) {
+        font-size: 2rem;
+        grid-column: 3 / -1;
+    }
+
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / -1;
+    }
 }
 
 .about-project__bottom-row {
     @include grid();
     align-items: flex-start;
     margin-bottom: 28rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 18rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 14rem;
+    }
 }
 
-.about-project__info-item:first-child {
+.about-project__info-item:nth-child(5n + 1) {
     grid-column: span 2;
+
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
+    }
 }
 
 .about-project__info-item-title {
@@ -39,6 +95,17 @@
     line-height: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 }
 
 .about-project__info-item-text {
@@ -46,9 +113,18 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
     text-transform: uppercase;
-    max-width: 22rem
-}
+    max-width: 22rem;
 
+    @include breakpoint(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+}
 
 .about-project__btn-wrapper {
     @include grid();
@@ -57,5 +133,4 @@
 .about-project__btn {
     grid-column: 3 / -1;
     justify-self: flex-start;
-
 }

@@ -1,6 +1,11 @@
 .project-location {
     padding-top: 3rem;
     padding-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 1.5rem;
+        padding-bottom: 5rem;
+    }
 }
 
 .project-location__top-row {
@@ -19,6 +24,10 @@
         line-height: 1.5rem;
     }
 
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / 2;
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.4rem;
@@ -28,11 +37,19 @@
 
 .project-location__large-heading {
     grid-column: 3 / -1;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / -1;
+    }
 }
 
 .project-location__proximity {
     @include grid();
     margin-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 3rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -44,6 +61,11 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+
+    @include breakpoint(small-tablet) {
+        grid-column: span 2;
+    }
     &::before {
         content: '';
         display: block;
@@ -86,6 +108,10 @@
     flex-direction: column;
     align-items: center;
 
+    @include breakpoint(small-tablet) {
+        grid-column: span 1;
+    }
+
     .project-location__proximity:nth-child(even) & {
         order: 3;
         align-items: flex-end;
@@ -111,11 +137,25 @@
     text-transform: uppercase;
     margin-bottom: 1rem;
 
+    @include breakpoint(tablet) {
+        font-size: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 2.2rem;
+    }
+
     .project-location__proximity:nth-child(even) & {
         font-weight: 500;
         font-size: 2.5rem;
         line-height: 110%;
         margin-bottom: 0.5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.8rem;
+        }
+
+       
     }
 }
 
@@ -124,10 +164,14 @@
     font-size: 1.5rem;
     line-height: 1.8rem;
 
-    .project-location__proximity:nth-child(even) & {
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 1.8rem;
+    @include breakpoint(tablet) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
     }
 }
 
@@ -136,8 +180,12 @@
     align-items: center;
     width: 100%;
     margin-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 3rem;
+    }
     .project-location__proximity:nth-child(even) & {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -146,6 +194,17 @@
     flex-shrink: 0;
     width: 3.5rem;
     height: 3.5rem;
+
+    @include breakpoint(tablet) {
+        width: 3rem;
+        height: 3rem;
+    }
+
+
+    @include breakpoint(small-tablet) {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
     svg {
         display: block;
         width: 100%;
