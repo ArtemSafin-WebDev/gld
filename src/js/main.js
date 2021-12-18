@@ -65,7 +65,7 @@ let homeIntroAnimated = false;
 function homeIntro() {
   
     const homeIntro = document.querySelector('.home-intro');
-    if (!homeIntro || homeIntroAnimated) return;
+    if (!homeIntro || homeIntroAnimated || window.matchMedia("(max-width: 640px)").matches) return;
     homeIntroAnimated = true;
     const heading = document.querySelector('.home-intro__main-heading');
 

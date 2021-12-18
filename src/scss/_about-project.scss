@@ -11,6 +11,11 @@
         padding-top: 3rem;
         padding-bottom: 2rem;
     }
+
+    @include breakpoint(mobile) {
+        padding-top: 1.8rem;
+        padding-bottom: 5rem;
+    }
 }
 
 .about-project__top-row {
@@ -23,6 +28,11 @@
 
     @include breakpoint(small-tablet) {
         margin-bottom: 14rem;
+    }
+
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
     }
 }
 
@@ -46,6 +56,7 @@
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 1.7rem;
+        grid-column: 1 / -1;
     }
 }
 
@@ -60,9 +71,15 @@
         grid-column: 3 / -1;
     }
 
-
     @include breakpoint(small-tablet) {
         grid-column: 2 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2rem;
     }
 }
 
@@ -78,14 +95,27 @@
     @include breakpoint(small-tablet) {
         margin-bottom: 14rem;
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .about-project__info-item:nth-child(5n + 1) {
     grid-column: span 2;
 
-
     @include breakpoint(small-tablet) {
         grid-column: span 1;
+    }
+
+
+    @include breakpoint(mobile) {
+        grid-column: span 2;
+        margin-bottom: 5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -99,12 +129,13 @@
     @include breakpoint(tablet) {
         font-size: 1.2rem;
         line-height: 1.5rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -121,8 +152,8 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -133,4 +164,8 @@
 .about-project__btn {
     grid-column: 3 / -1;
     justify-self: flex-start;
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
 }

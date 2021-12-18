@@ -2,7 +2,7 @@
     padding-bottom: 3rem;
 
     @include breakpoint(tablet) {
-        padding-bottom: 1.5rem;
+        padding-bottom: 2.5rem;
     }
 }
 
@@ -14,11 +14,9 @@
     margin-bottom: 5rem;
     height: 100vh;
 
-
-
     @include breakpoint(tablet) {
         height: auto;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
         &::before {
             content: '';
             display: block;
@@ -67,6 +65,10 @@
     @include breakpoint(small-tablet) {
         margin-bottom: 14rem;
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 10rem;
+    }
 }
 
 .project-gallery__first-letter {
@@ -82,14 +84,13 @@
         line-height: 110%;
     }
 
-
     @include breakpoint(small-tablet) {
         grid-column: 1 / 2;
     }
 
     @include breakpoint(mobile) {
         font-weight: normal;
-        font-size: 3rem;
+        font-size: 2.7rem;
         line-height: 100%;
     }
 }
@@ -113,7 +114,7 @@
 
     @include breakpoint(mobile) {
         font-weight: normal;
-        font-size: 3rem;
+        font-size: 2.7rem;
         line-height: 100%;
     }
 }
@@ -128,9 +129,14 @@
 .project-gallery__grid {
     @include grid();
 
-
     @include breakpoint(small-tablet) {
         grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0 calc(-1 * var(--content-padding));
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1rem;
     }
 }
 
@@ -144,31 +150,37 @@
         padding-bottom: 56.25%;
     }
 
-    &:nth-child(3) {
+    &:nth-child(5n + 3) {
         grid-column: span 4;
         &::before {
             padding-bottom: 77.4%;
         }
     }
-    &:nth-child(4) {
+    &:nth-child(5n + 4) {
         grid-column: span 2;
         &::before {
             padding-bottom: 157.7%;
         }
     }
 
-    &:nth-child(5) {
+    &:nth-child(5n + 5) {
         grid-column: 1 / -1;
     }
 
+    @include breakpoint(mobile) {
+        grid-column: span 1 !important;
 
-    // @include breakpoint(small-tablet) {
-    //     grid-column: span 1 !important;
-    //     &::before {
-    //         content: '';
-    //         padding-bottom: 56.25% !important;
-    //     }
-    // }
+        &:nth-child(5n + 4) {
+            &::before {
+                padding-bottom: 157.7% !important;
+            }
+        }
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 60% !important;
+        }
+    }
 }
 
 .project-gallery__card-image-container {

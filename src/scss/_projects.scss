@@ -89,7 +89,7 @@
     }
 
     @include breakpoint(mobile) {
-      
+        grid-column: 1 / -1;
         margin-left: -0.5rem;
     }
 }
@@ -201,6 +201,7 @@
         flex-direction: row;
         align-items: initial;
         gap: 3rem;
+        row-gap: 1rem;
         flex-wrap: wrap;
     }
 }

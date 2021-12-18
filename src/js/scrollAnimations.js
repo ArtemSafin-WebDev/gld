@@ -145,33 +145,29 @@ export default function scrollAnimations() {
         const topText = element.querySelector('.project-gallery__words-top');
         const bottomText = element.querySelector('.project-gallery__words-bottom');
 
-        ScrollTrigger.matchMedia({
-            '(min-width: 641px)': () => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: element,
-                        start: 'top bottom',
-                        end: 'bottom top',
-                        scrub: true,
-                        markers: false,
-                        ...scrollerOptions
-                    }
-                });
-
-                tl.to(topText, {
-                    x: () => -1 * convertRemToPixels(7),
-                    duration: 0.6
-                });
-                tl.to(
-                    bottomText,
-                    {
-                        x: () => convertRemToPixels(7),
-                        duration: 0.6
-                    },
-                    0
-                );
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: element,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+                markers: false,
+                ...scrollerOptions
             }
         });
+
+        tl.to(topText, {
+            x: () => -1 * convertRemToPixels(7),
+            duration: 0.6
+        });
+        tl.to(
+            bottomText,
+            {
+                x: () => convertRemToPixels(7),
+                duration: 0.6
+            },
+            0
+        );
     });
 
     function initializeParallaxForProjects() {
@@ -307,6 +303,8 @@ export default function scrollAnimations() {
     const onFootIllustrations = Array.from(document.querySelectorAll('.js-project-proximity'));
 
     onFootIllustrations.forEach(element => {
+
+        if (!locoScroll) return;
         const human = element.querySelector('.project-location__proximity-illustration-scale-human');
         const scale = element.querySelector('.project-location__proximity-illustration-scale-rule');
         const tl = gsap.timeline({
@@ -338,6 +336,9 @@ export default function scrollAnimations() {
     projectFooters.forEach(element => {
         const wrapper = element.querySelector('.project-footer__bg-parallax-wrapper');
         const inner = element.querySelector('.project-footer__inner');
+
+        if (!locoScroll) return;
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: element,

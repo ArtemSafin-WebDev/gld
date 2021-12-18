@@ -33,6 +33,10 @@
         background: linear-gradient(0deg, rgba(77, 61, 53, 0.5), rgba(77, 61, 53, 0.5));
         mix-blend-mode: multiply;
         z-index: 3;
+
+        @include breakpoint(mobile) {
+            background: linear-gradient(0deg, rgba(77, 61, 53, 0.7), rgba(77, 61, 53, 0.7));
+        }
     }
 }
 
@@ -59,6 +63,10 @@
     padding-top: 4rem;
     padding-bottom: 2.2rem;
     @include grid();
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+    }
 }
 
 .project-footer__next-project-heading {
@@ -81,6 +89,9 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.7rem;
+        font-weight: 400;
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
     }
 }
 
@@ -109,31 +120,48 @@
         font-weight: normal;
         font-size: 3rem;
         line-height: 100%;
+        grid-column: 1 / -1;
     }
     svg {
         width: 5rem;
         height: 5rem;
         fill: currentColor;
         flex-shrink: 0;
-        margin-left: auto;
+        margin-left: 2rem;
 
         @include breakpoint(tablet) {
             width: 3rem;
             height: 3rem;
         }
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
+.project-footer__next-project-link-content {
+    width: 50%;
+    flex-grow: 1;
+}
+
 .project-footer__next-project-number {
-    align-self: flex-start;
+    display: inline-block;
     font-size: 2rem;
     line-height: 1.2;
     margin-top: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
+    vertical-align: top;
 
     @include breakpoint(tablet) {
         font-size: 1.8rem;
-        margin-top: 0.2rem;
+        margin-top: .2rem;
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        margin-top: 0rem;
     }
 }
 
