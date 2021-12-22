@@ -1,6 +1,6 @@
 export function loader() {
     document.addEventListener('click', event => {
-        if (document.body.classList.contains('is-admin')) return;
+        if (document.body.classList.contains('admin-bar')) return;
         if (event.target.matches('a') || event.target.closest('a')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
 

@@ -166,11 +166,11 @@
     display: flex;
     align-items: flex-start;
     transform: translateY(100%);
-    transition: transform .4s ease-out;
+    transition: transform 0.4s ease-out;
 
     .animatable & {
         transform: translateY(0%);
-        transition-delay: .4s;
+        transition-delay: 0.4s;
     }
     @include breakpoint(tablet) {
         font-size: 10rem;
@@ -480,88 +480,88 @@
     }
 }
 
-.news__pagination {
-    display: flex;
-    align-items: center;
-    gap: 6rem;
+// .news__pagination {
+//     display: flex;
+//     align-items: center;
+//     gap: 6rem;
 
-    @include breakpoint(tablet) {
-        gap: 3rem;
-    }
+//     @include breakpoint(tablet) {
+//         gap: 3rem;
+//     }
 
-    @include breakpoint(mobile) {
-        gap: 1rem;
-        justify-content: center;
-    }
-}
+//     @include breakpoint(mobile) {
+//         gap: 1rem;
+//         justify-content: center;
+//     }
+// }
 
-.news__pagination-list {
-    display: flex;
-    align-items: center;
-}
+// .news__pagination-list {
+//     display: flex;
+//     align-items: center;
+// }
 
-.news__pagination-link {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 5.5rem;
-    height: 5.5rem;
-    border: 0.2rem solid transparent;
-    transition: border-color 0.2s, color 0.2s;
-    text-align: center;
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 110%;
-    font-feature-settings: 'tnum' on, 'lnum' on;
+// .news__pagination-link {
+//     display: inline-flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 5.5rem;
+//     height: 5.5rem;
+//     border: 0.2rem solid transparent;
+//     transition: border-color 0.2s, color 0.2s;
+//     text-align: center;
+//     font-weight: 500;
+//     font-size: 2.5rem;
+//     line-height: 110%;
+//     font-feature-settings: 'tnum' on, 'lnum' on;
 
-    @include breakpoint(tablet) {
-        width: 5rem;
-        height: 5rem;
-        font-size: 2rem;
-        line-height: 1.2;
-    }
+//     @include breakpoint(tablet) {
+//         width: 5rem;
+//         height: 5rem;
+//         font-size: 2rem;
+//         line-height: 1.2;
+//     }
 
-    @include breakpoint(mobile) {
-        width: 5rem;
-        height: 5rem;
-        font-size: 1.6rem;
-    }
+//     @include breakpoint(mobile) {
+//         width: 5rem;
+//         height: 5rem;
+//         font-size: 1.6rem;
+//     }
 
-    &.current {
-        color: #cfbcb3;
-        cursor: default;
-        pointer-events: none;
-    }
+//     &.current {
+//         color: #cfbcb3;
+//         cursor: default;
+//         pointer-events: none;
+//     }
 
-    .no-touch &:not(.current):hover,
-    .touch &:not(.current):active {
-        border-color: var(--dark-brown);
-        color: var(--dark-brown);
-    }
-}
+//     .no-touch &:not(.current):hover,
+//     .touch &:not(.current):active {
+//         border-color: var(--dark-brown);
+//         color: var(--dark-brown);
+//     }
+// }
 
-.news__pagination-next {
-    height: 5.5rem;
-    display: flex;
-    align-items: center;
-    border: 0.2rem solid var(--dark-brown);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+// .news__pagination-next {
+//     height: 5.5rem;
+//     display: flex;
+//     align-items: center;
+//     border: 0.2rem solid var(--dark-brown);
+//     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-    @include breakpoint(tablet) {
-        height: 5rem;
-    }
+//     @include breakpoint(tablet) {
+//         height: 5rem;
+//     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        background-color: var(--medium-brown);
-        color: var(--light-brown);
+//     .no-touch &:hover,
+//     .touch &:active {
+//         background-color: var(--medium-brown);
+//         color: var(--light-brown);
 
-        .news__pagination-next-icon svg {
-            fill: var(--light-brown);
-        }
-    }
-}
+//         .news__pagination-next-icon svg {
+//             fill: var(--light-brown);
+//         }
+//     }
+// }
 
 .news__pagination-next-text {
     width: 18rem;
@@ -609,6 +609,102 @@
         @include breakpoint(tablet) {
             width: 3rem;
             height: 3rem;
+        }
+    }
+}
+
+.news__pagination {
+    display: flex;
+    align-items: center;
+   
+
+    @include breakpoint(mobile) {
+        justify-content: center;
+    }
+    .page-numbers:not(.next):not(.prev) {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 5.5rem;
+        height: 5.5rem;
+        border: 0.2rem solid transparent;
+        transition: border-color 0.2s, color 0.2s;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 110%;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+
+        @include breakpoint(tablet) {
+            width: 5rem;
+            height: 5rem;
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        @include breakpoint(mobile) {
+            width: 5rem;
+            height: 5rem;
+            font-size: 1.6rem;
+        }
+
+        &.current {
+            color: #cfbcb3;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .no-touch &:not(.current):hover,
+        .touch &:not(.current):active {
+            border-color: var(--dark-brown);
+            color: var(--dark-brown);
+        }
+    }
+
+    .next,
+    .prev {
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        border: 0.2rem solid var(--dark-brown);
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+        @include breakpoint(tablet) {
+            height: 5rem;
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            background-color: var(--medium-brown);
+            color: var(--light-brown);
+
+            .news__pagination-next-icon svg {
+                fill: var(--light-brown);
+            }
+        }
+    }
+
+    .prev {
+        margin-right: 6rem;
+        @include breakpoint(tablet) {
+            margin-right: 3rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-right: 1rem;
+            
+        }
+    }
+    .next {
+        margin-left: 6rem;
+        @include breakpoint(tablet) {
+            margin-left: 3rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-left: 1rem;
+            
         }
     }
 }

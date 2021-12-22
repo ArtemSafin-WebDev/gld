@@ -268,7 +268,7 @@
                                         </span>
                                     </div>
                                     <div class="page-header__projects-link-count">
-                                        ²³
+                                        23
                                     </div>
                                 </a>
                             </h3>
@@ -462,7 +462,7 @@
                     </div>
                 </div>
                 <div class="about__film">
-                    <a href="#" class="about__film-video-card js-remove-overlay js-video-card">
+                    <a href="#video-modal" class="about__film-video-card js-remove-overlay js-video-card js-open-modal">
                         <div class="about__film-video-container">
                             <img src="img/film.jpg" alt="" class="about__film-video-preview-image">
                         </div>
@@ -1505,7 +1505,44 @@
     </div>
 </footer>
         </div>
-        <div class="loader">
+        <div class="video-modal js-modal" id="video-modal">
+            <div class="video-modal__inner">
+        
+                <div class="video-modal__grid">
+                    <div class="video-modal__top-row">
+        
+                        <div class="container">
+        
+        
+                            <div class="video-modal__top-row-inner">
+                                <div class="video-modal__description">
+                                    <p>
+                                        “An integrated approach is the basis of our work. we create and manage high-class
+                                        commercial
+                                        and residential facilities.“
+                                    </p>
+                                </div>
+                                <button class="video-modal__close-btn js-close-modal">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-close">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-modal__content">
+        
+                        <div class="video-modal__card">
+        
+                            <video class="js-media-player" playsinline controls>
+                                <source src="assets/video/video.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>        <div class="loader">
         
         </div>
         
