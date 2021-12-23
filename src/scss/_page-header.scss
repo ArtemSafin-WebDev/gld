@@ -92,7 +92,7 @@ svg.page-header__logo-image {
     position: absolute;
     left: 0;
     top: 0;
-    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    // transition: opacity 0.3s, visibility 0s linear 0.3s;
     pointer-events: initial;
     margin-top: 0.3rem;
 
@@ -104,14 +104,14 @@ svg.page-header__logo-image {
         .home-intro & {
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s, visibility 0s linear 0.3s;
+            // transition: opacity 0.3s, visibility 0s linear 0.3s;
         }
     }
-    .sticky-header & {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity 0.3s, visibility 0.3s;
-    }
+    // .sticky-header & {
+    //     opacity: 1;
+    //     visibility: inherit;
+    //     transition: opacity 0.3s, visibility 0.3s;
+    // }
 
     svg {
         display: block;
@@ -140,29 +140,43 @@ svg.page-header__logo-image {
 }
 
 .page-header__nav {
-    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
     transform-origin: center top;
 
     @include breakpoint(mobile) {
-        transform: scaleY(0);
-        opacity: 0;
-        visibility: hidden;
-        transition: none;
+        display: none;
 
         .home-intro & {
-            opacity: 1;
-            visibility: inherit;
-            transform: scaleY(1);
-            transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+            display: block;
         }
     }
 
-    .sticky-header & {
-        transform: scaleY(0);
-        opacity: 0;
-        visibility: hidden;
-        transition: transform 0.3s, opacity 0.3s, visibility 0s linear 0.3s;
-    }
+    // @include breakpoint(mobile) {
+    //     transform: scaleY(0);
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transition: none;
+    //     transition: transform 0.3s, opacity 0.3s, visibility 0s ease .3s;
+    //     .home-intro & {
+    //         opacity: 1;
+    //         visibility: inherit;
+    //         transform: scaleY(1);
+    //         transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+    //     }
+    // }
+
+    // @include breakpointMF(small-tablet) {
+    //     transform: scaleY(0);
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transition: transform 0.3s, opacity 0.3s, visibility 0s linear 0.3s;
+    //     .page-header:not(.sticky-header) & {
+    //         transform: scaleY(1);
+    //         opacity: 1;
+    //         visibility: inherit;
+    //         transition: all .3s;
+    //     }
+    // }
+
     & > ul {
         display: flex;
         flex-direction: column;

@@ -1,6 +1,11 @@
 .about {
     background: var(--medium-brown);
     color: var(--dark-brown);
+
+    &--light {
+        background-color: var(--light-brown);
+        color: var(--dark-brown);
+    }
 }
 
 .about__content {
