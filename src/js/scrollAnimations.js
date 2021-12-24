@@ -446,6 +446,24 @@ export default function scrollAnimations() {
             duration: 0.4
         });
     }
+    const aboutIntro = document.querySelector('.about-intro');
+
+    if (aboutIntro) {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: aboutIntro,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true,
+                ...scrollerOptions
+            }
+        });
+
+        tl.to('.about-intro__bg-parallax-wrapper', {
+            yPercent: 10,
+            duration: 0.4
+        });
+    }
     const selectedImage = document.querySelector('.js-selected-image');
 
     if (selectedImage) {

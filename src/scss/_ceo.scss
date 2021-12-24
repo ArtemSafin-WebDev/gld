@@ -3,6 +3,13 @@
     background-color: var(--medium-brown);
     color: var(--dark-brown);
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        margin-bottom: 4rem;
+    }
+
+    
 }
 
 .ceo__grid {
@@ -11,6 +18,10 @@
 
 .ceo__inner {
     grid-column: 3 / -1;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / -1;
+    }
 }
 
 .ceo__heading {
@@ -41,6 +52,28 @@
     line-height: 110%;
     column-count: 2;
     column-gap: 2rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 1.6rem;
+    }
+
+    @include breakpoint(mobile) {
+        column-count: 1;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        margin-top: 2rem;
+        p {
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .ceo__photo {
@@ -48,4 +81,8 @@
     height: auto;
     width: 100%;
     margin-top: 5rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: 3rem;
+    }
 }

@@ -1,11 +1,30 @@
 .partners {
-   margin-bottom: 22rem;
+    margin-bottom: 22rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 15rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
 }
 
 .partners__top-row {
     @include grid();
     margin-bottom: 10rem;
-   
+
+    @include breakpoint(tablet) {
+        margin-bottom: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .partners__small-heading {
@@ -20,20 +39,49 @@
         line-height: 1.5rem;
     }
 
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / 2;
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 1.7rem;
+        grid-column: 1 / -1;
     }
 }
 
 .partners__large-heading {
     grid-column: 3 / -1;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
 }
 
 .partners__list {
     @include grid();
     margin-bottom: 12rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 .partners__card {
@@ -61,7 +109,6 @@
     mix-blend-mode: multiply;
 }
 
-
 .partners__bottom-row {
     @include grid();
 }
@@ -70,4 +117,12 @@
     grid-column: 3 / -1;
     justify-self: flex-start;
     align-self: flex-start;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / 3;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 2 / -1;
+    }
 }

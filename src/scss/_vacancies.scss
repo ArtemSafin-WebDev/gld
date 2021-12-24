@@ -1,6 +1,11 @@
 .vacancies {
     padding-top: 14rem;
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 7rem;
+        margin-bottom: 7rem;
+    }
 }
 
 .vacancies__row {
@@ -13,6 +18,17 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
     align-items: flex-start;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 1 / 2;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+        display: flex;
+        grid-gap: unset;
+    }
 }
 
 .vacancies__navigation-heading {
@@ -21,6 +37,18 @@
     line-height: 123.02%;
     display: flex;
     align-items: center;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 123.02%;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 11.5rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+    }
     &::after {
         content: '';
         height: 1px;
@@ -35,6 +63,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        flex-direction: row;
+        align-items: initial;
+        gap: 3rem;
+        row-gap: 1rem;
+        flex-wrap: wrap;
+    }
 }
 
 .vacancies__navigation-link {
@@ -43,6 +79,16 @@
     line-height: 123.02%;
     margin-bottom: 1rem;
     color: #cfbcb3;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 123.02%;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 
     &:link,
     &:visited {
@@ -67,10 +113,22 @@
     line-height: 1.2;
     display: inline-block;
     vertical-align: top;
+
+    @include breakpoint(tablet) {
+        font-size: 0.8rem;
+    }
 }
 
 .vacancies__content {
     grid-column: 3 / -1;
+
+    @include breakpoint(small-tablet) {
+        grid-column: 2 / -1;
+    }
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
 }
 
 .vacancies__tabs {
@@ -111,14 +169,26 @@
                 left: 3rem;
                 right: 3rem;
             }
+            @include breakpoint(mobile) {
+                left: 2rem;
+                right: 2rem;
+            }
         }
 
         .vacancies__card-header-content {
             transform: translateX(3rem);
+
+            @include breakpoint(mobile) {
+                transform: translateX(2rem);
+            }
         }
 
         .vacancies__card-header-icon {
             transform: translateX(-3rem);
+
+            @include breakpoint(mobile) {
+                transform: translateX(-2rem);
+            }
         }
 
         
@@ -132,11 +202,22 @@
             &::after {
                 left: 3rem;
                 right: 3rem;
+
+                @include breakpoint(mobile) {
+                    left: 2rem;
+                    right: 2rem;
+                }
             }
+
+
         }
 
         .vacancies__card-header-content {
             transform: translateX(3rem);
+
+            @include breakpoint(mobile) {
+                transform: translateX(2rem);
+            }
         }
         .vacancies__card-header {
             &::before {
@@ -150,6 +231,10 @@
 
         .vacancies__card-header-icon {
             transform: translateX(-3rem) rotate(-45deg);
+
+            @include breakpoint(mobile) {
+                transform: translateX(-2rem) rotate(-45deg);
+            }
         }
 
         .vacancies__card-header-icon svg {
@@ -165,6 +250,10 @@
     justify-content: center;
     cursor: pointer;
     position: relative;
+    padding: 2rem 0;
+    @include breakpoint(tablet) {
+        min-height: 12rem;
+    }
 
     .vacancies__card:first-child & {
         &::before {
@@ -210,6 +299,15 @@
     font-size: 2.5rem;
     line-height: 110%;
     margin-bottom: 1rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.8rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 0.7rem;
+    }
 }
 
 .vacancies__card-header-city {
@@ -218,6 +316,19 @@
     font-size: 1.5rem;
     line-height: 123.02%;
     color: #a98774;
+
+    @include breakpoint(tablet) {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+   
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 }
 
 .vacancies__card-header-icon {
@@ -226,6 +337,17 @@
     width: 2.4rem;
     height: 2.4rem;
     transition: transform .3s;
+
+    @include breakpoint(tablet) {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-top: 0.5rem;
+    }
 
     svg {
         display: block;
@@ -245,11 +367,26 @@
     padding: 3rem;
     padding-top: 4.5rem;
     padding-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+        padding: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
 }
 
 .vacancies__card-content-row {
     display: flex;
     align-items: flex-start;
+
+    @include breakpoint(small-tablet) {
+       display: grid;
+       grid-template-columns: minmax(0, 1fr);
+       grid-gap: 3rem;
+       align-items: stretch;
+    }
 }
 
 .vacancies__card-requirements {
@@ -257,6 +394,19 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 123.02%;
+
+    @include breakpoint(tablet) {
+       
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+   
+    @include breakpoint(mobile) {
+        
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 
     p {
         margin-bottom: 1rem;
@@ -270,16 +420,45 @@
     flex-shrink: 0;
     width: 22rem;
     margin-right: 4rem;
+
+    @include breakpoint(tablet) {
+        width: 18rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        order: 5;
+    }
 }
 .vacancies__card-content-right-col {
     width: 50%;
     flex-grow: 1;
+
+    @include breakpoint(small-tablet) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .vacancies__card-text-content {
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 1.8rem;
+
+    @include breakpoint(tablet) {
+       
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+   
+    @include breakpoint(mobile) {
+        
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
     h1,
     h2,
     h3,
@@ -291,6 +470,11 @@
         font-weight: 500;
         font-size: 2.5rem;
         line-height: 110%;
+
+        @include breakpoint(tablet) {
+            font-size: 1.6rem;
+            margin-top: 3rem;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -298,6 +482,10 @@
 
     p {
         margin-top: 2rem;
+
+        @include breakpoint(tablet) {
+            margin-top: 1.5rem;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -305,6 +493,9 @@
 
     ul {
         margin-top: 2rem;
+        @include breakpoint(tablet) {
+            margin-top: 1.5rem;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -313,6 +504,10 @@
             margin-bottom: 1.6rem;
             display: flex;
             align-items: flex-start;
+
+            @include breakpoint(tablet) {
+                margin-bottom: 1.4rem;
+            }
             &::before {
                 content: '';
                 width: 0.4rem;
@@ -322,6 +517,10 @@
                 flex-shrink: 0;
                 margin-top: 0.7rem;
                 margin-right: 1rem;
+
+                @include breakpoint(tablet) {
+                    margin-top: 0.5rem;
+                }
             }
             &:last-child {
                 margin-bottom: 0;
@@ -332,4 +531,8 @@
 
 .vacancies__card-link {
     margin-top: 4rem;
+
+    @include breakpoint(tablet) {
+        margin-top: 3rem;
+    }
 }
