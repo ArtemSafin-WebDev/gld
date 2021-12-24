@@ -26,6 +26,7 @@ import { SplitText } from 'gsap/SplitText';
 import gsap from 'gsap';
 import animatedHeadings from './animatedHeaders';
 import tabs from './tabs';
+import contactForms from './contactForms';
 
 gsap.registerPlugin(SplitText);
 
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     refreshOnResize();
     mobileFullheightBlocks();
     tabs();
+    contactForms();
 
     setTimeout(() => {
         document.body.classList.add('animatable');
