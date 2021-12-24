@@ -77,7 +77,7 @@ Parsley.addMessages('ru', {
     equalto: 'Это значение должно совпадать.',
 });
 
-Parsley.setLocale('ru');
+// Parsley.setLocale('ru');
 
 export default function validation() {
     const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
